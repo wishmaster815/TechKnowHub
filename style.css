@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page 2 CSS begins here  */
+#page2{
+    width: 100%;
+    padding: 5% 10%;
+    background-color: #ffeede;
+    display: block;
+}
+
+#imgs h2{
+    display: none;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+#page2 img{
+    /* display: inline; */
+    position: absolute;
+}
+
+.Rings{
+    height: 67%;
+    width: 33%;
+    rotate: 90deg;
+    /* display: none; */
+}
+#Ring2{
+    left: 15%;
+}
+#food-1{
+    height: 45%;
+    width: 16%;
+    top: 12%;
+    
+    object-fit: cover;
+}
+#food-2{
+    height: 45%;
+    width: 16%;
+    object-fit: cover;
+    top: 38%;
+    left: 32%;
+}
+#page2Txt{
+    padding: 2% 7%;
+}
+#page2Txt h2{
+    font-size: 2.5rem;
+    font-family: 'Hammersmith One', sans-serif;
+}
+#page2Txt p{
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+#page2Txt button{
+    margin: 15px 0;
+    border-radius: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* Media Queries page2 */
+@media only screen and (max-width:992px){
+    #imgs img{
+        position: static;
+        /* text-align: center; */
+        height: 100%;
+        width: 40%;
+        margin:20px auto;
+        padding: 10px;
+        
+    }
+    #page2{
+        text-align: center;
+    }
+    #imgs{
+        margin-bottom: 10px;
+        height: fit-content;
+    }
+    #imgs h2{
+        display: block;
+        font-size: 2.3rem;
+    }
+    .Rings{
+        display: none;
+    }
+    #page2Txt h2{
+        display: none;
+    }
+    #page2Txt p{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (max-width:600px){
+    #imgs img{
+        position: static;
+        /* text-align: center; */
+        height: 100%;
+        width: 100%;
+        margin:auto;
+        padding: 10px;
+        
+    }
+    
+    #imgs{
+        margin-bottom: 20px;
+        
+    }
+    .Rings{
+        display: none;
+    }
+    #imgs h2{
+        margin-bottom: 20px;
+    }
+    #page2Txt p{
+        font-size: 1.1rem;
+        
+    }
+    #page2Txt{
+        padding: 1% 4%;
+        
+    }
+}
+
+@media only screen and (max-width:440px){
+    #imgs h2{
+        font-size: 1.8rem;
+    }
+    #page2Txt p{
+        font-size: 0.9rem;
+    }
+    #page2Txt button{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width:340px){
+    #imgs h2{
+        font-size: 1.5rem;
+    }
+    #page2Txt p{
+        font-size: 0.7rem;
+        margin-top: 10px;
+    }
+    #page2Txt button{
+        font-size: 0.7rem;
+        margin: 5px 0;
+    }
+}
