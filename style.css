@@ -118,10 +118,10 @@
     }
     #page2Txt p{
         font-size: 1.1rem;
-        
+        margin-top: 0px;
     }
     #page2Txt{
-        padding: 1% 4%;
+        padding: 0 4%;
         
     }
 }
@@ -131,10 +131,11 @@
         font-size: 1.8rem;
     }
     #page2Txt p{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     #page2Txt button{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        width: 70%;
     }
 }
 @media only screen and (max-width:340px){
@@ -143,7 +144,10 @@
     }
     #page2Txt p{
         font-size: 0.7rem;
-        margin-top: 10px;
+        
+    }
+    #page2{
+        padding: 5% 5%;
     }
     #page2Txt button{
         font-size: 0.7rem;
