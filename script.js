@@ -8,9 +8,9 @@ tl.from("#imgs h2,#imgs img,#page2Txt h2,#page2Txt p,#page2Txt button",{
     scrollTrigger:{
         scroller:"body",
         trigger:"#page2",
-        // start:"top 20%",
+        start:"top 80%",
         end:"top 40%",
-        markers:true,
+        // markers:true,
         scrub:2
     }
     

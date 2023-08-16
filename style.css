@@ -33,7 +33,7 @@
     width: 100%;
     padding: 5% 10%;
     background-color: #ffeede;
-    display: block;
+    /* display: block; */
     position: relative;
 }
 
@@ -110,6 +110,9 @@
     #page2 {
         text-align: center;
     }
+    #page2 p{
+        text-align: left;
+    }
 
     #imgs {
         margin-bottom: 10px;
@@ -124,7 +127,9 @@
     .Rings {
         display: none;
     }
-
+    #page2Txt{
+        padding: 2% 0;
+    }
     #page2Txt h2 {
         display: none;
     }
@@ -207,8 +212,159 @@
 /* ----------------------------------Page 2 End--------------------------------------------- */
 
 
+
+
+/* ----------------------------------Page 3 CSS begins here--------------------------------------------- */
+
+
 #page3{
-    background-color: red;
-    height: 100vh;
-    width:100%
+    background-color: ffeede;
+    padding: 5% 10%;
+    width:100%;
+    position: relative;
+    margin: auto;
+}
+#page3Img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+#appet
+{
+    text-align: center;
+}
+#appet img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.col-lg-8 p,.col-lg-8 button{
+    display: none;
+}
+.col-lg-8 button{
+    border-radius: 0;
+}
+.page3Img1 img,.page3Img2 img{
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+#page3Txt{
+    padding: 3%;
+    
+}
+#page3Txt h2{
+    font-size: 2.5rem;
+    font-family: 'Hammersmith One', sans-serif;
+}
+#page3Txt p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+#page3Txt button{
+    border-radius: 0;
+    margin-top: 10px;
+}
+#appet h4,#page3Img h4{
+    font-family:'Hammersmith One', sans-serif ;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width:992px)
+{
+    .page3Img1 img,.page3Img2 img{
+        height: 120px;
+        width: 80%;
+        
+    }
+    #page3Txt{
+        padding: 0;
+    }
+    #appet img{
+        height: 300px;
+        width: 85%;
+        
+    }
+    #page3Txt h2{
+        font-size: 2.3rem;
+    }
+    #page3Txt p,#page3Txt button{
+        display: none;
+    }
+    #appet h4,#page3Img h4{
+        
+        font-size: 1.1rem;
+        
+    }
+    .col-lg-8 p,.col-lg-8 button{
+        display: block;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    
+}
+@media only screen and (max-width:768px){
+    .page3Img1 img,.page3Img2 img{
+        height: 170px;
+        width: 60%;
+        margin-top: 25px;
+    }
+    #appet img{
+        height: 170px;
+        width: 60%;
+        margin-top: 25px;
+    }
+    #page3Txt h2{
+        text-align: center;
+    }
+}
+@media only screen and (max-width:768px){
+    .page3Img1 img,.page3Img2 img{
+        height: 150px;
+        width: 70%;
+    }
+    #appet img{
+        height: 150px;
+        width: 70%;
+        
+    }
+    #page3Txt h2{
+        font-size: 1.8rem ;
+    }
+    #appet h4,#page3Img h4{
+        
+        font-size: 0.9rem;
+        
+    }
+    .col-lg-8 p,.col-lg-8 button{
+    margin-top: 15px;
+        font-size: 0.8rem;
+        
+    }
+    .col-lg-8 button{
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-width:340px){
+    #page3Txt h2{
+        font-size: 1.5rem ;
+    }
+    #appet h4,#page3Img h4{
+        
+        font-size: 0.8rem;
+        
+    }
+    .col-lg-8 p,.col-lg-8 button{
+        
+            font-size: 0.7rem;
+            
+        }
 }
