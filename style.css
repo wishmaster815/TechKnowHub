@@ -3,31 +3,94 @@
     margin: 0;
     padding: 0;
 }
-/* page 1 */
-#page1{
+/* ---------- Page 1 CSS ----------  */
+#page1 {
     height: 100vh;
     width: 100%;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
+    /* position: absolute; */
+  }
+  #main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  #page1-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+    padding-block: 5%;
+  }
+  #page1-content h1 {
+      font-family: "Hammersmith One", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+    color: white;
+    font-size: 7rem;
+    margin-block: 10%;
+    font-weight: 900;
     position: relative;
- }
- video{
-     height: 100%;
-     width: 100%;
-     object-fit: cover;
-     
- 
- }
- #page1 h1{
+    letter-spacing: 1%;
+  }
+  #page1-content h2 {
+      font-family: 'Solway', serif;
+    text-align: center;
     text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 900;
     position: relative;
-    /* font-family: ; */
- }
- #page1 h2{
-    text-transform: uppercase;
-    position: relative;
-    /* font-family: ; */
- }
-
+    color: white;  
+  }
+  
+  /* Page1 media queries CSS */
+  @media only screen and (max-width: 992px){
+      #page1-content h1{
+          font-size: 6rem;
+          margin-block: 20%;
+      }
+      #page1-content h2{
+          font-size: 3rem;
+  
+      }
+  }
+  
+  @media only screen and (max-width: 440px){
+      #page1-content{
+          padding-top: 20%;
+      }
+      #page1-content h1{
+          font-size: 5rem;
+          margin-block: 30%;
+      }
+      #page1-content h2{
+          font-size: 2rem;
+  
+      }
+  }
+  
+  @media only screen and (max-width: 340px){
+      #page1-content{
+          padding-top: 40%;
+      }
+      #page1-content h1{
+          font-size: 4rem;
+          margin-block: 50%;
+      }
+      #page1-content h2{
+          font-size: 1.76rem;
+  
+      }
+  }
+  
+  /* Page 1 CSS End */
+  
+  
 /* --------------------------------Page 2 CSS begins here------------------------------  */
 #page2 {
     width: 100%;
