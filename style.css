@@ -27,13 +27,14 @@
     position: relative;
     /* font-family: ; */
  }
- 
+
 /* --------------------------------Page 2 CSS begins here------------------------------  */
 #page2 {
     width: 100%;
     padding: 5% 10%;
     background-color: #ffeede;
     display: block;
+    position: relative;
 }
 
 #imgs h2 {
