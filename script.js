@@ -70,7 +70,8 @@ tl.from("#page3Txt h2,#page3Txt p,#page3Txt button,#appet,.page3Img1,.page3Img2"
     }
     
 })
-tl.from(".carousel-item,#page4 h1",{
+if(window.matchMedia("(min-width:768px)").matches){
+  tl.from(".carousel-item,#page4 h1",{
     y:100,
     
     // delay:0.5,
@@ -87,6 +88,7 @@ tl.from(".carousel-item,#page4 h1",{
     }
     
 })
+}
 
 // Page 4 JS and Jquery 
 if(window.matchMedia("(min-width:992px)").matches){
