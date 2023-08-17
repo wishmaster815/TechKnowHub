@@ -402,8 +402,6 @@
     #page3Txt h2{
         text-align: center;
     }
-}
-@media only screen and (max-width:768px){
     .page3Img1 img,.page3Img2 img{
         height: 150px;
         width: 70%;
@@ -430,6 +428,7 @@
         margin-top: 5px;
     }
 }
+
 @media only screen and (max-width:340px){
     #page3Txt h2{
         font-size: 1.5rem ;
@@ -445,3 +444,127 @@
             
         }
 }
+
+/* Page 3 Css end  */
+
+
+
+/* Page 4 Css Begins Here -----------------------------  */
+#page4{
+    padding: 7% 0 4% 0;
+    background-color: black;
+
+}
+#testimonial-carousel{
+    padding: 5% 15%;
+}
+#page4 h1{
+    color: white;
+    text-align: center;
+    padding-bottom:3% ;
+    font-family:'Hammersmith One', sans-serif ;
+    font-size: 2.5rem;
+}
+.card-title{
+    font-family:'Hammersmith One', sans-serif ;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.card-text{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.1rem;
+}
+
+.card-img-top{
+    width: 22%;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+.card{
+    display: block;
+    border: 0;
+    border-radius: 0;
+    color: white;
+    background-color: black;
+    box-shadow: 3px 3px 15px rgb(99, 99, 99);
+    margin: 2% 6%;
+}
+
+
+@media only screen and (min-width:992px){
+    #caro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .carousel-item{
+        margin-right: 0;
+        display: block;
+        flex: 0 0 calc(100%/3);
+        
+    }
+}
+@media only screen and (max-width:992px){
+    .card{
+        box-shadow: none;
+    }
+    .carousel-item{
+        padding: 0 15%;
+    }
+    .card-img-top{
+        height: 80px;
+    }
+    #page4 h1{
+        font-size: 2.3rem;
+    }
+    .card-text{
+        font-size: 0.9rem;
+    }
+    
+}
+@media only screen and (max-width:768px){
+    .card-text{
+        font-size: 0.8rem;
+    }
+    #page4 h1{
+        font-size: 2rem;
+    }
+    .card-img-top{
+        height: 65px;
+        
+    }
+}
+@media only screen and (max-width:600px){
+    .card-text{
+        font-size: 0.7rem;
+    }
+    .card-title{
+        font-size:1.2rem ;
+    }
+    .carousel-item{
+        padding: 0 8%;
+    }
+    #page4 h1{
+        font-size: 1.7rem;
+    }
+    .card-img-top{
+        height: 50px;
+        
+    }
+}
+@media only screen and (max-width:440px){
+    #page4 h1{
+        font-size: 1.2rem;
+        
+    }
+    .carousel-item{
+        padding: 0;
+    }
+    #page4{
+        padding-top: 10%;
+    }
+}
+

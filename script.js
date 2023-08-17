@@ -70,3 +70,44 @@ tl.from("#page3Txt h2,#page3Txt p,#page3Txt button,#appet,.page3Img1,.page3Img2"
     }
     
 })
+tl.from(".carousel-item,#page4 h1",{
+    y:100,
+    
+    // delay:0.5,
+    opacity:0,
+    stagger:0.2,
+    scrollTrigger:{
+        scroller:"#main",
+        trigger:"#page4",
+        start:"top 20%",
+        end:"top 40%",
+        // top:"50%",
+        // markers:true,
+        scrub:3
+    }
+    
+})
+
+// Page 4 JS and Jquery 
+if(window.matchMedia("(min-width:992px)").matches){
+
+  var carouselWidth = $('.carousel-inner')[0].scrollWidth;
+  var cardWidth = $('.carousel-item').width();
+  
+  var scrollPosition = 0;
+  
+  $('.carousel-control-next').on('click',function(){
+    if(scrollPosition< (carouselWidth-(cardWidth*4))){
+  
+      scrollPosition = scrollPosition + cardWidth;
+      $('.carousel-inner').animate({scrollLeft: scrollPosition},600);
+    }
+  });
+  $('.carousel-control-prev').on('click',function(){
+    if(scrollPosition>=0){
+  
+      scrollPosition = scrollPosition - cardWidth;
+      $('.carousel-inner').animate({scrollLeft: scrollPosition},600);
+    }
+  });
+}
