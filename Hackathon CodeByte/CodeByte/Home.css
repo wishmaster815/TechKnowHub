@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+/* ------------------------CSS for Home Page Navbar ------------------------------ */
+#Window1{
+    background-color: #F5F7F9;
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: row;
+   
+}
+#navbox{
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+#Searchform2,#Searchbox2,#Login2{
+    display: none;
+    
+}
+.Logobox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14%;
+    margin-right: 3%;
+}
+.LogoText{
+    color: #4682A9;
+}
+.nav-link{
+    color: #4681a9;
+    opacity: 0.6;
+    
+}
+.nav-link:hover{
+    color: #00385D;
+    opacity: 0.6;
+    
+}
+.navbar-toggler{
+    border: 0px;
+    border-radius: 0;
+    color: #002035;
+}
+
+.Logo{
+    width: 24px;
+    height: 38px;
+}
+.Logobox span{
+    font-weight: 600;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.5rem;
+    color: #00385D;
+}
+#Searchform{
+    width: 50%;
+}
+#Searchbox{
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+#Searchbox i{
+    padding: 10px 10px;
+    background-color: white;
+}
+#Searchbar{
+    border-radius: 0;
+    border: 0;
+    
+
+}
+#Login{
+    width: 30%;
+    border: 0;
+    border-radius: 0;
+    background-color: #00385D;
+    color: white;
+
+}
+#Login:hover,#Login2:hover{
+    
+    background-color: #002035;
+    
+
+}
+#Login2{
+    width: 30%;
+    border: 0;
+    border-radius: 0;
+    background-color: #00385D;
+    color: white;
+
+}
+@media only screen and (max-width:1150px){
+    .Logobox{
+        margin-right: 7%;
+    }
+    #Login{
+        font-size: 0.8rem;
+    }
+
+}
+@media only screen and (max-width:992px){
+    #navbox{
+        justify-content: left;
+    }
+    .Logobox{
+        display: none;
+    }
+    #Searchbox{
+        display: none;
+    }
+    #Login{
+        display: none;
+    }
+    #Searchform2,#Searchbox2,#Login2{
+        display: block;
+        margin: auto;
+        
+    }
+    #Searchform2{
+        width: 100%;
+        padding: 3% 5%;
+    }
+    #Searchbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        
+    }
+    #Searchbar2{
+        border-radius: 0;
+        border: 0;
+    }
+    #Login2{
+        font-size: 0.8rem;
+    }
+    #Searchbox2 i{
+        padding: 9px 2%;
+        background-color: white;
+    }
+
+
+}
+@media only screen and (max-width:453px){
+    #Login2{
+        font-size: 0.6rem;
+    }
+    #Searchbar2{
+        font-size: 0.8rem;
+    }
+    .nav-link{
+        font-size: 0.8rem;
+    }
+    .dropdown-item{
+        font-size: 0.8rem;
+    }
+
+}
+@media only screen and (max-width:361px){
+    #Login2{
+        font-size: 0.4rem;
+    }
+    #Searchbar2{
+        font-size: 0.7rem;
+    }
+    .nav-link{
+        font-size: 0.7rem;
+    }
+    .dropdown-item{
+        font-size: 0.7rem;
+    }
+
+}
+/* ----------------------------CSS for first page below navbar----------------------- */
+#Frontbox{
+    padding: 5% 10%;
+    margin: 0;
+    width: 100%;
+    
+}
+#Frontimg{
+    text-align: center;
+}
+#Frontimg img{
+    width: 80%;
+    
+}
+.Titleimg{
+    width: 30%;
+    margin-right: 2%;
+}
+#Titleimgbox{
+    display: flex;
+    flex-direction: row;
+    
+}
+#Fronttext{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#Titletext h1{
+    font-family: 'Source Serif 4', serif;
+    color: #00385D;
+    font-weight: 600;
+    font-size: 2.2rem;
+}
+.latest{
+    
+    color:#4681a9;
+    
+}
+.btn{
+    border-radius: 0;
+    border: 0;
+    background-color: #00385D;
+
+}
+#Frontbtn{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#Frontbtn:hover{
+    background-color: #002035;
+}
+
+@media only screen and (max-width:1150px){
+    #Frontbox{
+        padding: 3% 5%;
+        display: flex;
+        
+    }
+    #Frontimg img{
+        width: 90%;
+        
+    }
+    #Frontbtn{
+        font-size: 0.8rem;
+    }
+    #Titletext h1{
+        font-size: 1.8rem;
+    }
+    .latest{
+        font-size: 0.8rem;
+    }
+
+}
+@media only screen and (max-width:845px){
+    
+    #Frontbtn{
+        font-size: 0.8rem;
+    }
+    #Titletext h1{
+        font-size: 1.6rem;
+    }
+    
+}
+@media only screen and (max-width:767px){
+    
+    #Frontimg img{
+        width: 60%;
+        
+    }
+    .Titleimg{
+        width: 20%;
+        margin: 0 3%;
+        margin-bottom: 2%;
+        
+    }
+    #Fronttext{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #Titletext{
+        text-align: left;
+    }
+    #Frontbtn{
+        width: 100%;
+        justify-content: center;
+    }
+    #Frontbtn i{
+        margin-left: 2%;
+    }
+    #Frontimg{
+        margin-bottom: 20px;
+    }
+    
+    
+}
+@media only screen and (max-width:540px){
+    #Titletext h1{
+        font-size: 1.4rem;
+    }
+    .latest{
+        font-size: 0.6rem;
+    }
+    #Frontimg img{
+        width: 70%;
+        
+    }
+
+}
+@media only screen and (max-width:380px){
+    #Titletext h1{
+        font-size: 1.1rem;
+    }
+    .latest{
+        font-size: 0.5rem;
+    }
+    #Frontimg img{
+        width: 80%;
+        
+    }
+
+}
