@@ -238,6 +238,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.1rem;
 }
 #Frontbtn:hover{
     background-color: #002035;
@@ -332,4 +333,101 @@
         
     }
 
+}
+
+
+
+
+
+
+/* -------------------------------------CSS of Window 2----------------------------- */
+
+#Window2{
+    padding: 3% 5%;
+}
+#catbox{
+    display: flex;
+    justify-content: space-between;
+}
+#catbox h3{
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #002035;
+}
+
+.cat{
+    
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    color: white;
+    
+}
+.cattext{
+    display: flex;
+    width: 95%;
+    background-color: #002035;
+    margin: auto;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+
+}
+.catactive{
+    height: 240px;
+}
+
+/* ---------------------Main Recent Articles page---------------- */
+#Window3{
+    padding: 3% 0%;
+}
+
+.articlehead{
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:#00385D;
+}
+.articles{
+    display: flex;
+    background-color: #F5F7F9;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2% 0;
+}
+.articles img{
+    width: 30%;
+    
+}
+.articletext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    margin-right: 2.5%;
+    /* align-items: center; */
+}
+.fullarticle{
+    width: 40%;
+}
+.fullarticle:hover{
+    background-color: #002035;
+}
+.spans{
+    margin-bottom: 2%;
+}
+.tag{
+    color: #00385D;
+    margin-right: 2%;
+}
+.min{
+    color: #749BC2;
+}
+
+.articletext p{
+    color: #4682A9;
+}
+.articlehead2{
+    font-size: 1.6rem;
 }
