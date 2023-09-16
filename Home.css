@@ -3,7 +3,10 @@
     box-sizing: border-box;
     padding: 0;
 }
-
+.linkbox{
+    text-decoration: none;
+    
+}
 
 /* ------------------------CSS for Home Page Navbar ------------------------------ */
 #Window1{
@@ -394,7 +397,7 @@
     background-color: #F5F7F9;
     justify-content: space-between;
     width: 100%;
-    margin: 2% 0;
+    margin: 2% 0 5%;
 }
 .articles img{
     width: 30%;
@@ -430,4 +433,152 @@
 }
 .articlehead2{
     font-size: 1.6rem;
+}
+.recombox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 3% 0;
+}
+.recomitem{
+    width: 95%;
+    background-color: #F5F7F9;
+}
+.recomimg{
+    width: 100%;
+}
+.recomtext p{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #4682A9;
+}
+.recomtext span{
+    font-size: 0.8rem;
+}
+.recomhead{
+    color: #00385D;
+}
+
+#trending h3{
+    color: #00385D;
+    font-size: 1.8rem;
+    margin: 5% 0;
+}
+.iconbox{
+    margin: 10% 0;
+    display: flex;
+    justify-content: space-around;
+}
+.handleicons{
+    font-size: 1.8rem;
+
+}
+.trendingcon{
+    background-color: #F5F7F9;
+    height: 100%;
+    /* margin-top: 4%; */
+    
+    padding: 8% 8% 0;
+}
+/* -----------------------------------CSS of trending page------------------------- */
+.trendingimg{
+    width: 80%;
+}
+.trendingitem{
+    text-align: center;
+    margin:5% 0 3%;
+    padding: 0;
+}
+
+.trendingtext{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.trendingtext #trendinghead{
+    margin: 1% 0;
+    font-size: 1.4rem;
+}
+.trendingitem h1{
+    text-align: left;
+    color: #00385D;
+    font-size: 2rem;
+}
+.trendingtext p{
+    font-size: 0.9rem;
+    color: #4682A9;
+}
+.trendingcon h4{
+    color: #00385D;
+}
+#trending{
+    padding: 1.4% 0 2%;
+}
+
+@media only screen and (max-width:1150px){
+    .articletext p,.recomtext p,.min,.trendingtext p{
+        font-size: 0.8rem;
+    }
+    .recomhead{
+        font-size: 1.2rem;
+    }
+    .spans{
+        font-size: 0.8rem;
+    }
+    .fullarticle{
+        font-size: 0.9rem;
+    }
+    .recomitem .recomtext .min{
+        font-size: 0.6rem !important; 
+        
+    }
+    #mail{
+        width: 20%;
+    }
+    .trendingcon #mailtext{
+        font-size: 1.4rem;
+    }
+    .trendingcon h4{
+        font-size: 1.4rem;
+    }
+    
+
+}
+@media only screen and (max-width:992px){
+    .articletext p,.recomtext p,.min,.trendingtext p{
+        font-size: 0.7rem;
+    }
+    .recomhead{
+        font-size: 1.1rem;
+    }
+    
+    .spans{
+        font-size: 0.8rem;
+    }
+    .fullarticle{
+        font-size: 0.8rem;
+    }
+    #mail{
+        width: 20%;
+    }
+    .trendingcon #mailtext{
+        font-size: 1.3rem;
+    }
+    .trendingcon h4{
+        font-size: 1.3rem;
+    }
+    .articlehead2{
+        font-size: 1.3rem;
+    }
+    
+
+}
+@media only screen and (max-width:768px){
+    #catbox{
+        display: none;
+    }
+    
+
 }
