@@ -39,9 +39,7 @@
     width: 14%;
     margin-right: 3%;
 }
-.LogoText{
-    color: #4682A9;
-}
+
 .nav-link{
     color: #4681a9;
     opacity: 0.6;
@@ -67,6 +65,9 @@
     font-family: 'Source Serif 4', serif;
     font-size: 1.5rem;
     color: #00385D;
+}
+#Window1 .navbar #navbox .Logobox #LogoText{
+    color: #749BC2;
 }
 #Searchform{
     width: 50%;
@@ -671,3 +672,296 @@
         font-size: 1.2rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* --------------------------CSS for Window 4-------------------- */
+#Window4{
+    background-color: #002035;
+    width: 100%;
+    
+}
+#Window4 .row{
+    padding: 0;
+    margin: 0;
+}
+#Upload h2{
+    font-family: 'Source Serif 4', serif;
+    color: white;
+}
+#Upload{
+    color: white;
+    padding: 0% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+#Upload h2, #Uploadbtn{
+    z-index: 3;
+}
+#Uploadbtn{
+    color: white;
+    margin-top: 4%;
+   
+}
+#Uploadimgbox{
+    padding: 0;
+  
+}
+#Uploadimg{
+    width: 100%;
+}
+#Upload::before{
+    content: "";
+    background: url('images/Effort_today__success_tomorrow___keep_studying.-removebg-preview.png') no-repeat center center/cover;
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+    opacity: .3;
+}
+@media only screen and (max-width:767px){
+    #Uploadimg{
+        display: none;
+    }
+    #Upload{
+        padding: 10% 10%;
+        margin: 0;
+    }
+    
+}
+@media only screen and (max-width:540px){
+    #Upload h2{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width:307px){
+    #Upload h2{
+        font-size: 1rem;
+    }
+}
+
+
+/* -------------------------------CSS Window 5----------------------- */
+#Window5{
+    padding: 5% 5%;
+}
+.cont{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    padding: 3% 0 0;
+}
+#Footercon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#Contact ul li{
+    
+    list-style: none;
+}
+#Contact ul{
+   
+    padding: 0;
+}
+#Footerlogobox{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+#Footerlogo{
+    width: 42px;
+    height: 64px;
+    margin-right: 10px;
+}
+.Logobox{
+    text-decoration: none;
+
+}
+#Footerlogotext,#Footerlogotext span{
+    font-size: 1.8rem;
+    font-family: 'Source Serif 4', serif;
+    color: #00385D;
+    font-weight: 600;
+}
+#Footerlogotext span{
+    color: #749BC2;
+}
+.Footeritem #Footerlogobox{
+    align-items:center;
+    
+}
+.Footeritem{
+    width: 30%;
+    color:#00385D;
+}
+#Footerlogobox{
+    margin-bottom: 20px;
+}
+.Footeritemhead{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+#Footercat ul li,#Footertrending ul li{
+    list-style: none;
+}
+
+#Footercat ul,#Footertrending ul{
+    padding: 0;
+    text-align: center;
+
+}
+#Footercat ul li a,#Footertrending ul li a{
+    text-decoration: none;
+    color: #00385D;
+}
+#Footercat .Footeritemhead,#Footertrending .Footeritemhead{
+    margin-bottom: 20px;
+}
+#Footercatbox, #Footertrendingbox{
+    width: 20%;
+}
+#Footermember ul{
+    list-style: none;
+    text-align: center;
+}
+#Footermemberbox{
+    width: 20%;
+}
+#Footermemberbox .Footeritemhead{
+    margin-bottom: 20px;
+}
+#Footericon{
+    padding: 0 5%;
+}
+#Footericon .iconbox .fa-envelope{
+    flex-wrap: wrap;
+}
+#Footermember ul{
+    
+    padding: 0;
+}
+
+/* --------------------Footer----------------------------- */
+#Window6{
+    width: 100%;
+    background-color: #002035;
+    color: white;
+    text-align: center;
+    padding: 1.5% 0;
+}
+#Window6 h4{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+#Window6 h5{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+#Window6 h5 span{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:866px){
+    #Footerlogotext, #Footerlogotext span{
+        font-size: 1.5rem;
+    }
+    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
+        font-size: 1rem;
+    }
+    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
+        font-size: 0.8rem;
+    }
+    
+}
+@media only screen and (max-width:766px){
+    #Footerlogotext, #Footerlogotext span{
+        font-size: 1.3rem;
+    }
+    #Window6 h4{
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+    #Window6 h5{
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+    #Footerlogo{
+        width: 30px;
+        height: 52px;
+    }
+    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
+        font-size: 0.9rem;
+    }
+    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
+        font-size: 0.7rem;
+    }
+    
+}
+@media only screen and (max-width:666px){
+    #Footerlogotext, #Footerlogotext span{
+        font-size: 1.1rem;
+    }
+    #Footerlogo{
+        width: 24px;
+        height: 46px;
+    }
+    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
+        font-size: 0.8rem;
+    }
+    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
+        font-size: 0.7rem;
+    }
+    
+}
+@media only screen and (max-width:576px){
+    #Footercon{
+        width: 100%;
+    }
+    #Footericon h2{
+        font-size: 1.2rem;
+    }
+    #Footericon .iconbox .handleicons{
+        font-size: 1rem;
+    }
+    .cont{
+        width: 100%;
+    }
+    .Footeritem{
+        width: 100%;
+    }
+    #Footercatbox, #Footertrendingbox,#Footermemberbox{
+        width: 30%;
+    }
+    #Footerlogotext, #Footerlogotext span{
+        font-size: 1.1rem;
+    }
+    #Footerlogo{
+        width: 24px;
+        height: 46px;
+    }
+    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
+        font-size: 0.8rem;
+    }
+    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
+        font-size: 0.7rem;
+    }
+    
+    
+}
+
+
