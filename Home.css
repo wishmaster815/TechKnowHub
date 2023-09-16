@@ -204,14 +204,15 @@
     width: 80%;
     
 }
-.Titleimg{
-    width: 30%;
-    margin-right: 2%;
-}
-#Titleimgbox{
+
+.Titleimgbox{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     
+}
+.Titleimg{
+    width: 32%;
 }
 #Fronttext{
     text-align: left;
@@ -285,8 +286,8 @@
         
     }
     .Titleimg{
-        width: 20%;
-        margin: 0 3%;
+        width: 28%;
+        margin: 0 2%;
         margin-bottom: 2%;
         
     }
@@ -579,6 +580,94 @@
     #catbox{
         display: none;
     }
+
     
 
+}
+@media only screen and (max-width:768px){
+    #catbox{
+        display: none;
+    }
+    .trendingimg{
+        width: 35%;
+    }
+    .trendingitem{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* background-color: white; */
+        width: 100%;
+        
+    }
+    .trendingcon{
+        padding: 7% 0 0;
+    }
+    .trendingtext{
+        padding: 0 5%;
+        /* align-items: center; */
+    }
+    .mailbox{
+        padding: 0 8% 0;
+    }
+    .trendingcon h4{
+        margin-left: 4%;
+    }
+    
+
+}
+@media only screen and (max-width:683px){
+    .articletext p{
+        display: none;
+    }
+    .recombox{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .recombox .linkbox{
+        width: 48%;
+    }
+    .recomitem{
+        flex-flow: wrap;
+    }
+    .recomtext p{
+        display: none;
+    }
+
+}
+@media only screen and (max-width:540px){
+    .recomhead{
+        font-size: 0.9rem;
+    }
+    .trendingtext #trendinghead{
+        font-size: 1rem;
+    }
+    .articlehead{
+        font-size: 1rem;
+    }
+    .fullarticle{
+        font-size: 0.6rem;
+    }
+    .handleicons{
+        font-size: 1.4rem;
+    }
+    .spans .tag,.spans .min{
+        font-size: 0.5rem;
+    }
+}
+@media only screen and (max-width:307px){
+    .recomhead{
+        font-size: 0.8rem;
+    }
+    .trendingtext #trendinghead{
+        font-size: 0.9rem;
+    }
+    .articlehead{
+        font-size: 0.9rem;
+    }
+    .fullarticle{
+        font-size: 0.5rem;
+    }
+    .handleicons{
+        font-size: 1.2rem;
+    }
 }
