@@ -5,6 +5,8 @@
 }
 .linkbox{
     text-decoration: none;
+    width: 33%;
+    margin: 2% 0;
     
 }
 
@@ -283,7 +285,7 @@
 @media only screen and (max-width:767px){
     
     #Frontimg img{
-        width: 60%;
+        width: 100%;
         
     }
     .Titleimg{
@@ -321,7 +323,7 @@
         font-size: 0.6rem;
     }
     #Frontimg img{
-        width: 70%;
+        width: 100%;
         
     }
 
@@ -334,7 +336,7 @@
         font-size: 0.5rem;
     }
     #Frontimg img{
-        width: 80%;
+        width: 100%;
         
     }
 
@@ -392,6 +394,7 @@
     font-family: 'Source Serif 4', serif;
     font-size: 1.4rem;
     font-weight: 600;
+    margin-top: 3%;
     color:#00385D;
 }
 .articles{
@@ -440,10 +443,11 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 3% 0;
 }
 .recomitem{
-    width: 95%;
+    width: 98%;
     background-color: #F5F7F9;
 }
 .recomimg{
@@ -516,7 +520,7 @@
     color: #00385D;
 }
 #trending{
-    padding: 1.4% 0 2%;
+    padding: 1.4% 0 3.1%;
 }
 
 @media only screen and (max-width:1150px){
