@@ -1,972 +1,934 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
-.linkbox{
-    text-decoration: none;
-    width: 33%;
-    margin: 2% 0;
-    
+.linkbox {
+  text-decoration: none;
+  width: 33%;
+  margin: 2% 0;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+/* ------------------------CSS for Home Page Navbar ------------------------------ */
+#Window1 {
+  background-color: #f5f7f9;
+  width: 100%;
+}
+.navbar {
+  width: 100%;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: row;
+}
+#navbox {
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#Searchform2,
+#Searchbox2,
+#Login2 {
+  display: none;
+}
+.Logobox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 14%;
+  margin-right: 3%;
 }
 
-/* ------------------------CSS for Home Page Navbar ------------------------------ */
-#Window1{
-    background-color: #F5F7F9;
-    width: 100%;
+.nav-link {
+  color: #4681a9;
+  opacity: 0.6;
 }
-.navbar{
-    width: 100%;
-    /* overflow: hidden; */
-    display: flex;
-    flex-direction: row;
-   
+.nav-link:hover {
+  color: #00385d;
+  opacity: 0.6;
 }
-#navbox{
-    padding: 0 5%;
+.navbar-toggler {
+  border: 0px;
+  border-radius: 0;
+  color: #002035;
+}
+
+.Logo {
+  width: 24px;
+  height: 38px;
+}
+.Logobox span {
+  font-weight: 600;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.5rem;
+  color: #00385d;
+}
+#Window1 .navbar #navbox .Logobox #LogoText {
+  color: #749bc2;
+}
+#Searchform {
+  width: 50%;
+}
+#Searchbox {
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+#Searchbox i {
+  padding: 10px 10px;
+  background-color: white;
+}
+#Searchbar {
+  border-radius: 0;
+  border: 0;
+}
+#Login {
+  width: 30%;
+  border: 0;
+  border-radius: 0;
+  background-color: #00385d;
+  color: white;
+}
+#Login:hover,
+#Login2:hover {
+  background-color: #002035;
+}
+#Login2 {
+  width: 30%;
+  border: 0;
+  border-radius: 0;
+  background-color: #00385d;
+  color: white;
+}
+@media only screen and (max-width: 1150px) {
+  .Logobox {
+    margin-right: 7%;
+  }
+  #Login {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #navbox {
+    justify-content: left;
+  }
+  .Logobox {
+    display: none;
+  }
+  #Searchbox {
+    display: none;
+  }
+  #Login {
+    display: none;
+  }
+  #Searchform2,
+  #Searchbox2,
+  #Login2 {
+    display: block;
+    margin: auto;
+  }
+  #Searchform2 {
+    width: 100%;
+    padding: 3% 5%;
+  }
+  #Searchbox2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-   
-}
-#Searchform2,#Searchbox2,#Login2{
-    display: none;
-    
-}
-.Logobox{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 14%;
-    margin-right: 3%;
-}
-
-.nav-link{
-    color: #4681a9;
-    opacity: 0.6;
-    
-}
-.nav-link:hover{
-    color: #00385D;
-    opacity: 0.6;
-    
-}
-.navbar-toggler{
-    border: 0px;
+    width: 80%;
+  }
+  #Searchbar2 {
     border-radius: 0;
-    color: #002035;
-}
-
-.Logo{
-    width: 24px;
-    height: 38px;
-}
-.Logobox span{
-    font-weight: 600;
-    font-family: 'Source Serif 4', serif;
-    font-size: 1.5rem;
-    color: #00385D;
-}
-#Window1 .navbar #navbox .Logobox #LogoText{
-    color: #749BC2;
-}
-#Searchform{
-    width: 50%;
-}
-#Searchbox{
-    display: flex;
-    align-items: center;
-    width: 70%;
-}
-#Searchbox i{
-    padding: 10px 10px;
+    border: 0;
+  }
+  #Login2 {
+    font-size: 0.8rem;
+  }
+  #Searchbox2 i {
+    padding: 9px 2%;
     background-color: white;
+  }
 }
-#Searchbar{
-    border-radius: 0;
-    border: 0;
-    
-
+@media only screen and (max-width: 453px) {
+  #Login2 {
+    font-size: 0.6rem;
+  }
+  #Searchbar2 {
+    font-size: 0.8rem;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+  .dropdown-item {
+    font-size: 0.8rem;
+  }
 }
-#Login{
-    width: 30%;
-    border: 0;
-    border-radius: 0;
-    background-color: #00385D;
-    color: white;
-
-}
-#Login:hover,#Login2:hover{
-    
-    background-color: #002035;
-    
-
-}
-#Login2{
-    width: 30%;
-    border: 0;
-    border-radius: 0;
-    background-color: #00385D;
-    color: white;
-
-}
-@media only screen and (max-width:1150px){
-    .Logobox{
-        margin-right: 7%;
-    }
-    #Login{
-        font-size: 0.8rem;
-    }
-
-}
-@media only screen and (max-width:992px){
-    #navbox{
-        justify-content: left;
-    }
-    .Logobox{
-        display: none;
-    }
-    #Searchbox{
-        display: none;
-    }
-    #Login{
-        display: none;
-    }
-    #Searchform2,#Searchbox2,#Login2{
-        display: block;
-        margin: auto;
-        
-    }
-    #Searchform2{
-        width: 100%;
-        padding: 3% 5%;
-    }
-    #Searchbox2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        
-    }
-    #Searchbar2{
-        border-radius: 0;
-        border: 0;
-    }
-    #Login2{
-        font-size: 0.8rem;
-    }
-    #Searchbox2 i{
-        padding: 9px 2%;
-        background-color: white;
-    }
-
-
-}
-@media only screen and (max-width:453px){
-    #Login2{
-        font-size: 0.6rem;
-    }
-    #Searchbar2{
-        font-size: 0.8rem;
-    }
-    .nav-link{
-        font-size: 0.8rem;
-    }
-    .dropdown-item{
-        font-size: 0.8rem;
-    }
-
-}
-@media only screen and (max-width:361px){
-    #Login2{
-        font-size: 0.4rem;
-    }
-    #Searchbar2{
-        font-size: 0.7rem;
-    }
-    .nav-link{
-        font-size: 0.7rem;
-    }
-    .dropdown-item{
-        font-size: 0.7rem;
-    }
-
+@media only screen and (max-width: 361px) {
+  #Login2 {
+    font-size: 0.4rem;
+  }
+  #Searchbar2 {
+    font-size: 0.7rem;
+  }
+  .nav-link {
+    font-size: 0.7rem;
+  }
+  .dropdown-item {
+    font-size: 0.7rem;
+  }
 }
 /* ----------------------------CSS for first page below navbar----------------------- */
-#Frontbox{
-    padding: 5% 10%;
-    margin: 0;
+#Frontbox {
+  padding: 5% 10%;
+  margin: 0;
+  width: 100%;
+}
+#Frontimg {
+  text-align: center;
+}
+#Frontimg img {
+  width: 80%;
+}
+
+.Titleimgbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Titleimg {
+  width: 32%;
+}
+#Fronttext {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#Titletext h1 {
+  font-family: "Source Serif 4", serif;
+  color: #00385d;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+.latest {
+  color: #4681a9;
+}
+.btn {
+  border-radius: 0;
+  border: 0;
+  background-color: #00385d;
+}
+#Frontbtn {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.1rem;
+}
+#Frontbtn:hover {
+  background-color: #002035;
+}
+
+@media only screen and (max-width: 1150px) {
+  #Frontbox {
+    padding: 3% 5%;
+    display: flex;
+  }
+  #Frontimg img {
+    width: 90%;
+  }
+  #Frontbtn {
+    font-size: 0.8rem;
+  }
+  #Titletext h1 {
+    font-size: 1.8rem;
+  }
+  .latest {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 845px) {
+  #Frontbtn {
+    font-size: 0.8rem;
+  }
+  #Titletext h1 {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #Frontimg img {
     width: 100%;
-    
-}
-#Frontimg{
-    text-align: center;
-}
-#Frontimg img{
-    width: 80%;
-    
-}
-
-.Titleimgbox{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
-}
-.Titleimg{
-    width: 32%;
-}
-#Fronttext{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-#Titletext h1{
-    font-family: 'Source Serif 4', serif;
-    color: #00385D;
-    font-weight: 600;
-    font-size: 2.2rem;
-}
-.latest{
-    
-    color:#4681a9;
-    
-}
-.btn{
-    border-radius: 0;
-    border: 0;
-    background-color: #00385D;
-
-}
-#Frontbtn{
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
+  }
+  .Titleimg {
+    width: 28%;
+    margin: 0 2%;
+    margin-bottom: 2%;
+  }
+  #Fronttext {
+    justify-content: center;
     align-items: center;
+    text-align: center;
+  }
+  #Titletext {
+    text-align: left;
+  }
+  #Frontbtn {
+    width: 100%;
+    justify-content: center;
+  }
+  #Frontbtn i {
+    margin-left: 2%;
+  }
+  #Frontimg {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #Titletext h1 {
+    font-size: 1.4rem;
+  }
+  .latest {
+    font-size: 0.6rem;
+  }
+  #Frontimg img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 380px) {
+  #Titletext h1 {
     font-size: 1.1rem;
+  }
+  .latest {
+    font-size: 0.5rem;
+  }
+  #Frontimg img {
+    width: 100%;
+  }
 }
-#Frontbtn:hover{
-    background-color: #002035;
-}
-
-@media only screen and (max-width:1150px){
-    #Frontbox{
-        padding: 3% 5%;
-        display: flex;
-        
-    }
-    #Frontimg img{
-        width: 90%;
-        
-    }
-    #Frontbtn{
-        font-size: 0.8rem;
-    }
-    #Titletext h1{
-        font-size: 1.8rem;
-    }
-    .latest{
-        font-size: 0.8rem;
-    }
-
-}
-@media only screen and (max-width:845px){
-    
-    #Frontbtn{
-        font-size: 0.8rem;
-    }
-    #Titletext h1{
-        font-size: 1.6rem;
-    }
-    
-}
-@media only screen and (max-width:767px){
-    
-    #Frontimg img{
-        width: 100%;
-        
-        
-    }
-    .Titleimg{
-        width: 28%;
-        margin: 0 2%;
-        margin-bottom: 2%;
-        
-    }
-    #Fronttext{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    #Titletext{
-        text-align: left;
-    }
-    #Frontbtn{
-        width: 100%;
-        justify-content: center;
-    }
-    #Frontbtn i{
-        margin-left: 2%;
-    }
-    #Frontimg{
-        margin-bottom: 20px;
-    }
-    
-    
-}
-@media only screen and (max-width:540px){
-    #Titletext h1{
-        font-size: 1.4rem;
-    }
-    .latest{
-        font-size: 0.6rem;
-    }
-    #Frontimg img{
-        width: 100%;
-        
-    }
-
-}
-@media only screen and (max-width:380px){
-    #Titletext h1{
-        font-size: 1.1rem;
-    }
-    .latest{
-        font-size: 0.5rem;
-    }
-    #Frontimg img{
-        width: 100%;
-        
-    }
-
-}
-
-
-
-
-
 
 /* -------------------------------------CSS of Window 2----------------------------- */
 
-#Window2{
-    padding: 3% 5%;
+#Window2 {
+  padding: 3% 5%;
 }
-#catbox{
-    display: flex;
-    justify-content: space-between;
+#catbox {
+  display: flex;
+  justify-content: space-between;
 }
-#catbox h3{
-    font-family: 'Source Serif 4', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #002035;
+#catbox h3 {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #002035;
 }
 
-.cat{
-    
-    margin-top: 1%;
-    display: flex;
-    align-items: center;
-    color: white;
-    
+.cat {
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  color: white;
 }
-.cattext{
-    display: flex;
-    width: 95%;
-    background-color: #002035;
-    margin: auto;
-    height: 150px;
-    align-items: center;
-    justify-content: center;
-
+.cattext {
+  display: flex;
+  width: 95%;
+  background-color: #002035;
+  margin: auto;
+  height: 150px;
+  align-items: center;
+  justify-content: center;
 }
-.catactive{
-    height: 240px;
+.catactive {
+  height: 240px;
 }
 
 /* ---------------------Main Recent Articles page---------------- */
-#Window3{
-    padding: 3% 0%;
+#Window3 {
+  padding: 3% 0%;
 }
 
-.articlehead{
-    font-family: 'Source Serif 4', serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-top: 3%;
-    color:#00385D;
+.articlehead {
+  font-family: "Source Serif 4", serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 3%;
+  color: #00385d;
 }
-.articles{
-    display: flex;
-    background-color: #F5F7F9;
-    justify-content: space-between;
-    width: 100%;
-    margin: 2% 0 5%;
+.articles {
+  display: flex;
+  background-color: #f5f7f9;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2% 0 5%;
 }
-.articles img{
-    width: 30%;
-    
+.articles img {
+  width: 30%;
 }
-.articletext{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 65%;
-    margin-right: 2.5%;
-    /* align-items: center; */
+.articletext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  margin-right: 2.5%;
+  /* align-items: center; */
 }
-.fullarticle{
-    width: 40%;
+.fullarticle {
+  width: 40%;
 }
-.fullarticle:hover{
-    background-color: #002035;
+.fullarticle:hover {
+  background-color: #002035;
 }
-.spans{
-    margin-bottom: 2%;
+.spans {
+  margin-bottom: 2%;
 }
-.tag{
-    color: #00385D;
-    margin-right: 2%;
+.tag {
+  color: #00385d;
+  margin-right: 2%;
 }
-.min{
-    color: #749BC2;
-}
-
-.articletext p{
-    color: #4682A9;
-}
-.articlehead2{
-    font-size: 1.6rem;
-}
-.recombox{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 3% 0;
-}
-.recomitem{
-    width: 98%;
-    background-color: #F5F7F9;
-}
-.recomimg{
-    width: 100%;
-}
-.recomtext p{
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #4682A9;
-}
-.recomtext span{
-    font-size: 0.8rem;
-}
-.recomhead{
-    color: #00385D;
+.min {
+  color: #749bc2;
 }
 
-#trending h3{
-    color: #00385D;
-    font-size: 1.8rem;
-    margin: 5% 0;
+.articletext p {
+  color: #4682a9;
 }
-.iconbox{
-    margin: 10% 0;
-    display: flex;
-    justify-content: space-around;
+.articlehead2 {
+  font-size: 1.6rem;
 }
-.handleicons{
-    font-size: 1.8rem;
+.recombox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 3% 0;
+}
+.recomitem {
+  width: 98%;
+  background-color: #f5f7f9;
+}
+.recomimg {
+  width: 100%;
+}
+.recomtext p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #4682a9;
+}
+.recomtext span {
+  font-size: 0.8rem;
+}
+.recomhead {
+  color: #00385d;
+}
 
+#trending h3 {
+  color: #00385d;
+  font-size: 1.8rem;
+  margin: 5% 0;
 }
-.trendingcon{
-    background-color: #F5F7F9;
-    height: 100%;
-    /* margin-top: 4%; */
-    
-    padding: 8% 8% 0;
+.iconbox {
+  margin: 10% 0;
+  display: flex;
+  justify-content: space-around;
+}
+.handleicons {
+  font-size: 1.8rem;
+}
+.trendingcon {
+  background-color: #f5f7f9;
+  height: 100%;
+  /* margin-top: 4%; */
+
+  padding: 8% 8% 0;
 }
 /* -----------------------------------CSS of trending page------------------------- */
-.trendingimg{
-    width: 80%;
+.trendingimg {
+  width: 80%;
 }
-.trendingitem{
-    text-align: center;
-    margin:5% 0 3%;
-    padding: 0;
+.trendingitem {
+  text-align: center;
+  margin: 5% 0 3%;
+  padding: 0;
 }
 
-.trendingtext{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+.trendingtext {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
-.trendingtext #trendinghead{
-    margin: 1% 0;
-    font-size: 1.4rem;
+.trendingtext #trendinghead {
+  margin: 1% 0;
+  font-size: 1.4rem;
 }
-.trendingitem h1{
-    text-align: left;
-    color: #00385D;
-    font-size: 2rem;
+.trendingitem h1 {
+  text-align: left;
+  color: #00385d;
+  font-size: 2rem;
 }
-.trendingtext p{
+.trendingtext p {
+  font-size: 0.9rem;
+  color: #4682a9;
+}
+.trendingcon h4 {
+  color: #00385d;
+}
+#trending {
+  padding: 1.4% 0 3.1%;
+}
+
+@media only screen and (max-width: 1150px) {
+  .articletext p,
+  .recomtext p,
+  .min,
+  .trendingtext p {
+    font-size: 0.8rem;
+  }
+  .recomhead {
+    font-size: 1.2rem;
+  }
+  .spans {
+    font-size: 0.8rem;
+  }
+  .fullarticle {
     font-size: 0.9rem;
-    color: #4682A9;
+  }
+  .recomitem .recomtext .min {
+    font-size: 0.6rem !important;
+  }
+  #mail {
+    width: 20%;
+  }
+  .trendingcon #mailtext {
+    font-size: 1.4rem;
+  }
+  .trendingcon h4 {
+    font-size: 1.4rem;
+  }
 }
-.trendingcon h4{
-    color: #00385D;
-}
-#trending{
-    padding: 1.4% 0 3.1%;
-}
+@media only screen and (max-width: 992px) {
+  .articletext p,
+  .recomtext p,
+  .min,
+  .trendingtext p {
+    font-size: 0.7rem;
+  }
+  .recomhead {
+    font-size: 1.1rem;
+  }
 
-@media only screen and (max-width:1150px){
-    .articletext p,.recomtext p,.min,.trendingtext p{
-        font-size: 0.8rem;
-    }
-    .recomhead{
-        font-size: 1.2rem;
-    }
-    .spans{
-        font-size: 0.8rem;
-    }
-    .fullarticle{
-        font-size: 0.9rem;
-    }
-    .recomitem .recomtext .min{
-        font-size: 0.6rem !important; 
-        
-    }
-    #mail{
-        width: 20%;
-    }
-    .trendingcon #mailtext{
-        font-size: 1.4rem;
-    }
-    .trendingcon h4{
-        font-size: 1.4rem;
-    }
-    
-
+  .spans {
+    font-size: 0.8rem;
+  }
+  .fullarticle {
+    font-size: 0.8rem;
+  }
+  #mail {
+    width: 20%;
+  }
+  .trendingcon #mailtext {
+    font-size: 1.3rem;
+  }
+  .trendingcon h4 {
+    font-size: 1.3rem;
+  }
+  .articlehead2 {
+    font-size: 1.3rem;
+  }
 }
-@media only screen and (max-width:992px){
-    .articletext p,.recomtext p,.min,.trendingtext p{
-        font-size: 0.7rem;
-    }
-    .recomhead{
-        font-size: 1.1rem;
-    }
-    
-    .spans{
-        font-size: 0.8rem;
-    }
-    .fullarticle{
-        font-size: 0.8rem;
-    }
-    #mail{
-        width: 20%;
-    }
-    .trendingcon #mailtext{
-        font-size: 1.3rem;
-    }
-    .trendingcon h4{
-        font-size: 1.3rem;
-    }
-    .articlehead2{
-        font-size: 1.3rem;
-    }
-    
-
+@media only screen and (max-width: 768px) {
+  #catbox {
+    display: none;
+  }
 }
-@media only screen and (max-width:768px){
-    #catbox{
-        display: none;
-    }
-
-    
-
-}
-@media only screen and (max-width:768px){
-    #catbox{
-        display: none;
-    }
-    .trendingimg{
-        width: 35%;
-    }
-    .trendingitem{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        /* background-color: white; */
-        width: 100%;
-        
-    }
-    .trendingcon{
-        padding: 7% 0 0;
-    }
-    .trendingtext{
-        padding: 0 5%;
-        /* align-items: center; */
-    }
-    .mailbox{
-        padding: 0 8% 0;
-    }
-    .trendingcon h4{
-        margin-left: 4%;
-    }
-    
-
-}
-@media only screen and (max-width:683px){
-    .articletext p{
-        display: none;
-    }
-    .recombox{
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .recombox .linkbox{
-        width: 48%;
-    }
-    .recomitem{
-        flex-flow: wrap;
-    }
-    .recomtext p{
-        display: none;
-    }
-
-}
-@media only screen and (max-width:540px){
-    .recomhead{
-        font-size: 0.9rem;
-    }
-    .trendingtext #trendinghead{
-        font-size: 1rem;
-    }
-    .articlehead{
-        font-size: 1rem;
-    }
-    .fullarticle{
-        font-size: 0.6rem;
-    }
-    .handleicons{
-        font-size: 1.4rem;
-    }
-    .spans .tag,.spans .min{
-        font-size: 0.5rem;
-    }
-}
-@media only screen and (max-width:307px){
-    .recomhead{
-        font-size: 0.8rem;
-    }
-    .trendingtext #trendinghead{
-        font-size: 0.9rem;
-    }
-    .articlehead{
-        font-size: 0.9rem;
-    }
-    .fullarticle{
-        font-size: 0.5rem;
-    }
-    .handleicons{
-        font-size: 1.2rem;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/* --------------------------CSS for Window 4-------------------- */
-#Window4{
-    background-color: #002035;
-    width: 100%;
-    
-}
-#Window4 .row{
-    padding: 0;
-    margin: 0;
-}
-#Upload h2{
-    font-family: 'Source Serif 4', serif;
-    color: white;
-}
-#Upload{
-    color: white;
-    padding: 0% 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    
-}
-#Upload h2, #Uploadbtn{
-    z-index: 3;
-}
-#Uploadbtn{
-    color: white;
-    margin-top: 4%;
-   
-}
-#Uploadimgbox{
-    padding: 0;
-  
-}
-#Uploadimg{
-    width: 100%;
-}
-#Upload::before{
-    content: "";
-    background: url('images/Effort_today__success_tomorrow___keep_studying.-removebg-preview.png') no-repeat center center/cover;
-    position: absolute;
-    top: 30%;
-    right: -10%;
-    width: 80%;
-    height: 80%;
-    z-index: 2;
-    opacity: .3;
-}
-@media only screen and (max-width:767px){
-    #Uploadimg{
-        display: none;
-    }
-    #Upload{
-        padding: 10% 10%;
-        margin: 0;
-    }
-    
-}
-@media only screen and (max-width:540px){
-    #Upload h2{
-        font-size: 1.2rem;
-    }
-}
-@media only screen and (max-width:307px){
-    #Upload h2{
-        font-size: 1rem;
-    }
-}
-
-
-/* -------------------------------CSS Window 5----------------------- */
-#Window5{
-    padding: 5% 5%;
-}
-.cont{
-    display: flex;
-    width: 60%;
-    justify-content: space-evenly;
-    padding: 3% 0 0;
-}
-#Footercon{
+@media only screen and (max-width: 768px) {
+  #catbox {
+    display: none;
+  }
+  .trendingimg {
+    width: 35%;
+  }
+  .trendingitem {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-#Contact ul li{
-    
-    list-style: none;
-}
-#Contact ul{
-   
-    padding: 0;
-}
-#Footerlogobox{
-    display: flex;
     align-items: center;
-    text-decoration: none;
-}
-#Footerlogo{
-    width: 42px;
-    height: 64px;
-    margin-right: 10px;
-}
-.Logobox{
-    text-decoration: none;
-
-}
-#Footerlogotext,#Footerlogotext span{
-    font-size: 1.8rem;
-    font-family: 'Source Serif 4', serif;
-    color: #00385D;
-    font-weight: 600;
-}
-#Footerlogotext span{
-    color: #749BC2;
-}
-.Footeritem #Footerlogobox{
-    align-items:center;
-    
-}
-.Footeritem{
-    width: 30%;
-    color:#00385D;
-}
-#Footerlogobox{
-    margin-bottom: 20px;
-}
-.Footeritemhead{
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-#Footercat ul li,#Footertrending ul li{
-    list-style: none;
-}
-
-#Footercat ul,#Footertrending ul{
-    padding: 0;
-    text-align: center;
-
-}
-#Footercat ul li a,#Footertrending ul li a{
-    text-decoration: none;
-    color: #00385D;
-}
-#Footercat .Footeritemhead,#Footertrending .Footeritemhead{
-    margin-bottom: 20px;
-}
-#Footercatbox, #Footertrendingbox{
-    width: 20%;
-}
-#Footermember ul{
-    list-style: none;
-    text-align: center;
-}
-#Footermemberbox{
-    width: 20%;
-}
-#Footermemberbox .Footeritemhead{
-    margin-bottom: 20px;
-}
-#Footericon{
+    /* background-color: white; */
+    width: 100%;
+  }
+  .trendingcon {
+    padding: 7% 0 0;
+  }
+  .trendingtext {
     padding: 0 5%;
+    /* align-items: center; */
+  }
+  .mailbox {
+    padding: 0 8% 0;
+  }
+  .trendingcon h4 {
+    margin-left: 4%;
+  }
 }
-#Footericon .iconbox .fa-envelope{
+@media only screen and (max-width: 683px) {
+  .articletext p {
+    display: none;
+  }
+  .recombox {
+    justify-content: center;
     flex-wrap: wrap;
+  }
+  .recombox .linkbox {
+    width: 48%;
+  }
+  .recomitem {
+    flex-flow: wrap;
+  }
+  .recomtext p {
+    display: none;
+  }
 }
-#Footermember ul{
-    
-    padding: 0;
+@media only screen and (max-width: 540px) {
+  .recomhead {
+    font-size: 0.9rem;
+  }
+  .trendingtext #trendinghead {
+    font-size: 1rem;
+  }
+  .articlehead {
+    font-size: 1rem;
+  }
+  .fullarticle {
+    font-size: 0.6rem;
+  }
+  .handleicons {
+    font-size: 1.4rem;
+  }
+  .spans .tag,
+  .spans .min {
+    font-size: 0.5rem;
+  }
+}
+@media only screen and (max-width: 307px) {
+  .recomhead {
+    font-size: 0.8rem;
+  }
+  .trendingtext #trendinghead {
+    font-size: 0.9rem;
+  }
+  .articlehead {
+    font-size: 0.9rem;
+  }
+  .fullarticle {
+    font-size: 0.5rem;
+  }
+  .handleicons {
+    font-size: 1.2rem;
+  }
+}
+
+/* --------------------------CSS for Window 4-------------------- */
+#Window4 {
+  background-color: #002035;
+  width: 100%;
+}
+#Window4 .row {
+  padding: 0;
+  margin: 0;
+}
+#Upload h2 {
+  font-family: "Source Serif 4", serif;
+  color: white;
+}
+#Upload {
+  color: white;
+  padding: 0% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+#Upload h2,
+#Uploadbtn {
+  z-index: 3;
+}
+#Uploadbtn {
+  color: white;
+  margin-top: 4%;
+}
+#Uploadimgbox {
+  padding: 0;
+}
+#Uploadimg {
+  width: 100%;
+}
+#Upload::before {
+  content: "";
+  background: url("images/Effort_today__success_tomorrow___keep_studying.-removebg-preview.png")
+    no-repeat center center/cover;
+  position: absolute;
+  top: 30%;
+  right: -10%;
+  width: 80%;
+  height: 80%;
+  z-index: 2;
+  opacity: 0.3;
+}
+@media only screen and (max-width: 767px) {
+  #Uploadimg {
+    display: none;
+  }
+  #Upload {
+    padding: 10% 10%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #Upload h2 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 307px) {
+  #Upload h2 {
+    font-size: 1rem;
+  }
+}
+
+/* -------------------------------CSS Window 5----------------------- */
+#Window5 {
+  padding: 5% 5%;
+}
+.cont {
+  display: flex;
+  width: 60%;
+  justify-content: space-evenly;
+  padding: 3% 0 0;
+}
+#Footercon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#Contact ul li {
+  list-style: none;
+}
+#Contact ul {
+  padding: 0;
+}
+#Footerlogobox {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+#Footerlogo {
+  width: 42px;
+  height: 64px;
+  margin-right: 10px;
+}
+.Logobox {
+  text-decoration: none;
+}
+#Footerlogotext,
+#Footerlogotext span {
+  font-size: 1.8rem;
+  font-family: "Source Serif 4", serif;
+  color: #00385d;
+  font-weight: 600;
+}
+#Footerlogotext span {
+  color: #749bc2;
+}
+.Footeritem #Footerlogobox {
+  align-items: center;
+}
+.Footeritem {
+  width: 30%;
+  color: #00385d;
+}
+#Footerlogobox {
+  margin-bottom: 20px;
+}
+.Footeritemhead {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#Footercat ul li,
+#Footertrending ul li {
+  list-style: none;
+}
+
+#Footercat ul,
+#Footertrending ul {
+  padding: 0;
+  text-align: center;
+}
+#Footercat ul li a,
+#Footertrending ul li a {
+  text-decoration: none;
+  color: #00385d;
+}
+#Footercat .Footeritemhead,
+#Footertrending .Footeritemhead {
+  margin-bottom: 20px;
+}
+#Footercatbox,
+#Footertrendingbox {
+  width: 20%;
+}
+#Footermember ul {
+  list-style: none;
+  text-align: center;
+}
+#Footermemberbox {
+  width: 20%;
+}
+#Footermemberbox .Footeritemhead {
+  margin-bottom: 20px;
+}
+#Footericon {
+  padding: 0 5%;
+}
+#Footericon .iconbox .fa-envelope {
+  flex-wrap: wrap;
+}
+#Footermember ul {
+  padding: 0;
 }
 
 /* --------------------Footer----------------------------- */
-#Window6{
-    width: 100%;
-    background-color: #002035;
-    color: white;
-    text-align: center;
-    padding: 1.5% 0;
+#Window6 {
+  width: 100%;
+  background-color: #002035;
+  color: white;
+  text-align: center;
+  padding: 1.5% 0;
 }
-#Window6 h4{
-    font-size: 0.9rem;
-    font-weight: 400;
+#Window6 h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
-#Window6 h5{
+#Window6 h5 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+#Window6 h5 span {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 866px) {
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.5rem;
+  }
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 1rem;
+  }
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
     font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 766px) {
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.3rem;
+  }
+  #Window6 h4 {
+    font-size: 0.7rem;
     font-weight: 400;
+  }
+  #Window6 h5 {
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+  #Footerlogo {
+    width: 30px;
+    height: 52px;
+  }
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 0.9rem;
+  }
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.7rem;
+  }
 }
-#Window6 h5 span{
-    text-decoration: underline;
+@media only screen and (max-width: 666px) {
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.1rem;
+  }
+  #Footerlogo {
+    width: 24px;
+    height: 46px;
+  }
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 0.8rem;
+  }
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.7rem;
+  }
 }
-
-@media only screen and (max-width:866px){
-    #Footerlogotext, #Footerlogotext span{
-        font-size: 1.5rem;
-    }
-    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-        font-size: 1rem;
-    }
-    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-        font-size: 0.8rem;
-    }
-    
+@media only screen and (max-width: 576px) {
+  #Footercon {
+    width: 100%;
+  }
+  #Footericon h2 {
+    font-size: 1.2rem;
+  }
+  #Footericon .iconbox .handleicons {
+    font-size: 1rem;
+  }
+  .cont {
+    width: 100%;
+  }
+  .Footeritem {
+    width: 100%;
+  }
+  #Footercatbox,
+  #Footertrendingbox,
+  #Footermemberbox {
+    width: 30%;
+  }
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.1rem;
+  }
+  #Footerlogo {
+    width: 24px;
+    height: 46px;
+  }
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 0.8rem;
+  }
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.7rem;
+  }
 }
-@media only screen and (max-width:766px){
-    #Footerlogotext, #Footerlogotext span{
-        font-size: 1.3rem;
-    }
-    #Window6 h4{
-        font-size: 0.7rem;
-        font-weight: 400;
-    }
-    #Window6 h5{
-        font-size: 0.6rem;
-        font-weight: 400;
-    }
-    #Footerlogo{
-        width: 30px;
-        height: 52px;
-    }
-    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-        font-size: 0.9rem;
-    }
-    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-        font-size: 0.7rem;
-    }
-    
-}
-@media only screen and (max-width:666px){
-    #Footerlogotext, #Footerlogotext span{
-        font-size: 1.1rem;
-    }
-    #Footerlogo{
-        width: 24px;
-        height: 46px;
-    }
-    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-        font-size: 0.8rem;
-    }
-    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-        font-size: 0.7rem;
-    }
-    
-}
-@media only screen and (max-width:576px){
-    #Footercon{
-        width: 100%;
-    }
-    #Footericon h2{
-        font-size: 1.2rem;
-    }
-    #Footericon .iconbox .handleicons{
-        font-size: 1rem;
-    }
-    .cont{
-        width: 100%;
-    }
-    .Footeritem{
-        width: 100%;
-    }
-    #Footercatbox, #Footertrendingbox,#Footermemberbox{
-        width: 30%;
-    }
-    #Footerlogotext, #Footerlogotext span{
-        font-size: 1.1rem;
-    }
-    #Footerlogo{
-        width: 24px;
-        height: 46px;
-    }
-    #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-        font-size: 0.8rem;
-    }
-    #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-        font-size: 0.7rem;
-    }
-    
-    
-}
-
-

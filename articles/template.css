@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 /* ------------------------CSS for Home Page Navbar ------------------------------ */
 #Window1 {
   background-color: #f5f7f9;
@@ -264,7 +268,7 @@
 }
 @media only screen and (max-width: 540px) {
   #Titletext h1 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .latest {
     font-size: 0.6rem;
@@ -362,9 +366,48 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  #window2 {
+    flex-direction: column;
+  }
+  #author #name {
+    font-size: 1.4rem;
+  }
+  #author {
+    margin: 0;
+  }
+  #details {
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 0 2% 0;
+  }
+  .socialIcon {
+    width: 11%;
+  }
+  .upper {
+    font-size: 0.8rem;
+    margin-bottom: 2%;
+  }
 }
 @media only screen and (max-width: 540px) {
-
+  #author #name {
+    font-size: 1.2rem;
+  }
+  #details {
+    justify-content: space-around;
+    gap: 4%;
+    align-items: center;
+  }
+  #author-data p {
+    font-size: 0.85rem;
+    text-align: justify;
+  }
+  .socialIcon {
+    width: 9%;
+  }
+  .upper {
+    font-size: 0.7rem;
+    margin-bottom: 2%;
+  }
 }
 @media only screen and (max-width: 380px) {
 }
@@ -377,6 +420,7 @@
   margin-block: 2%;
   font-family: "Source Serif 4";
   color: #00385d;
+  font-size: 2.6rem;
 }
 #win3-head h2 {
   margin-block: 2%;
@@ -415,6 +459,12 @@
   #project-material {
     font-size: 1.1rem;
   }
+  #win3-head {
+    margin-block: 2%;
+    font-family: "Source Serif 4";
+    color: #00385d;
+    font-size: 2rem;
+  }
   .project-data .number {
     font-weight: 500;
     font-family: "Source Serif 4";
@@ -438,12 +488,14 @@
   }
 }
 @media only screen and (max-width: 767px) {
-    #project-material {
-      font-size: 1rem;
-    }
+  #project-material {
+    font-size: 1rem;
+  }
   .win3img-left img {
     width: 100%;
-    
+  }
+  #win3-head {
+    font-size: 1.6rem;
   }
   .win3img-right img {
     width: 100%;
@@ -455,18 +507,30 @@
   }
 }
 @media only screen and (max-width: 540px) {
+  #win3-head {
+    font-size: 1.4rem;
+  }
+  .project-data .number {
+    font-weight: 500;
+    font-family: "Source Serif 4";
+    font-size: 1.4rem;
+  }
 
+  #project-material {
+    font-size: 0.85rem;
+    /* text-align: justify; */
+  }
 }
 @media only screen and (max-width: 380px) {
 }
 
-
 /* -------------- WINDOW 4 ---------------- */
-#window4{
+#window4 {
   padding: 0;
   margin: 0;
+  width: 100%;
 }
-#materials-required{
+#materials-required {
   background-color: #002035;
   color: white;
   display: flex;
@@ -475,411 +539,621 @@
   justify-content: center;
   align-items: center;
 }
-.things-heading{
+.things-heading {
   font-size: 2.6rem;
   font-family: "Source Serif 4";
   margin-bottom: 6%;
 }
-.things-data{
+.things-data {
   font-size: 1.5rem;
 }
 
 /* --VIDEO SECTION-- */
-#video-section{
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
+#video-section {
   padding: 3% 5%;
-  /* height: 100vh; */
-
-  /* margin-block:3% ; */
 }
-#video-heading{
+#video-heading {
   font-size: 2.6rem;
   font-family: "Source Serif 4";
   margin-bottom: 2%;
 }
-.video-link{
+.video-link {
   width: 100%;
-  padding: 3%;
-  
 }
-
+#video-heading h2 {
+  font-size: 2.6rem;
+}
 
 @media only screen and (max-width: 1150px) {
+  #materials-required {
+    align-items: center;
+    justify-content: center;
+  }
+  .things-heading {
+    font-size: 2rem;
+  }
 
+  .things-data li {
+    font-size: 1.3rem;
+  }
+
+  #video-heading h2 {
+    font-size: 2rem;
+  }
+  .video-link {
+    height: 400px;
+  }
 }
 @media only screen and (max-width: 845px) {
- 
+  #materials-required {
+    align-items: center;
+    justify-content: center;
+  }
+  .things-heading {
+    font-size: 2rem;
+  }
+  .things-data {
+    font-size: 1rem;
+  }
+  .things-data li {
+    font-size: 1rem;
+  }
+
+  #video-heading h2 {
+    font-size: 2rem;
+  }
+  .video-link {
+    height: 340px;
+  }
 }
 @media only screen and (max-width: 767px) {
+  #materials-required {
+    align-items: center;
+    justify-content: center;
+  }
+  .things-heading {
+    font-size: 1.6rem;
+  }
+  .things-data {
+    font-size: 0.85rem;
+  }
+  .things-data li {
+    font-size: 1rem;
+  }
 
+  #video-heading h2 {
+    font-size: 1.6rem;
+  }
+  .video-link {
+    height: 270px;
+  }
 }
 @media only screen and (max-width: 540px) {
+  #materials-required {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .things-heading {
+    font-size: 1.4rem;
+  }
+  .things-data {
+    font-size: 0.85rem;
+  }
+  .things-data li {
+    font-size: 0.85rem;
+  }
 
+  #video-heading h2 {
+    font-size: 1.4rem;
+  }
+  .video-link {
+    height: 100%;
+  }
 }
 @media only screen and (max-width: 380px) {
 }
 
 /* --------------- WINDOW 5 --------------- */
-#window5{
+#window5 {
   padding: 0 5% 3%;
-
 }
-#community-heading{
+#community-heading {
   font-family: "Source Serif 4";
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin: 0 0 3% 0;
   color: #00385d;
 }
-#community-ques-section{
-  display: flex;
-  align-items: center;
+#community-ques-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 3%;
-  justify-content: space-between;
-  flex-wrap: nowrap;
 }
-.community-ques{
+.community-ques {
   padding: 2%;
   background-color: #f5f7f9;
 }
-.community-ques #ques{
+.community-ques #ques {
   display: inline;
-  background-color: #00385D;
+  background-color: #00385d;
   color: white;
-  border-radius:4rem;
+  border-radius: 4rem;
   padding: 2.2%;
   font-size: 0.75rem;
 }
-.community-ques h2{
+.community-ques h2 {
   font-size: 1.6rem;
   margin-top: 2%;
   margin-bottom: 7%;
 }
-.community-ques h5{
+.community-ques h5 {
   font-size: 1.2rem;
-  margin:5% 0 18% 0;
+  margin: 5% 0 18% 0;
 }
-#user-query{
+#user-query {
   display: flex;
   align-items: center;
   margin-block: 2%;
   gap: 3%;
 }
-#thumbs{
+#user-query #user-name {
+  margin: 0;
+}
+#thumbs {
   display: flex;
   gap: 10%;
 }
-#thumbs-up{
+#thumbs-up {
   display: flex;
   gap: 5%;
   align-items: center;
   justify-content: center;
 }
-#thumbs-down{
+#thumbs-up p {
+  margin: 0;
+}
+
+#thumbs-down {
   display: flex;
   gap: 5%;
-  align-items: center;}
+  align-items: center;
+}
+#thumbs-down p {
+  margin: 0;
+}
 
-#ask-question{
+#ask-question {
   margin: 2% 0 2% 0;
 }
-#ask-head{
+#ask-head {
   margin: 0 0 1% 0;
   font-family: "Source Serif 4";
   color: #00385d;
-  font-size: 2rem;
+  font-size: 2.6rem;
 }
-#ask-question form{
+#ask-question form {
   /* width: 80%; */
   align-content: center;
 }
 
 @media only screen and (max-width: 1150px) {
-
+  #community-heading,
+  #ask-head {
+    font-size: 2rem;
+  }
+  .community-ques h2 {
+    font-size: 1.4rem;
+  }
+  .community-ques h5,
+  #user-name {
+    font-size: 1.1rem;
+  }
+  #thumbs-up img {
+    width: 80%;
+  }
+  #thumbs-down img {
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 845px) {
- 
+  #community-heading,
+  #ask-head {
+    font-size: 2rem;
+  }
+  .community-ques h2 {
+    font-size: 1.2rem;
+  }
+  .community-ques h5,
+  #user-name {
+    font-size: 1rem;
+  }
+  #thumbs-up img {
+    width: 50%;
+  }
+  #thumbs-down img {
+    width: 50%;
+  }
+  #user-query img {
+    width: 20%;
+  }
 }
 @media only screen and (max-width: 767px) {
-
+  #community-heading,
+  #ask-head {
+    font-size: 1.6rem;
+  }
+  .community-ques h2 {
+    font-size: 1.1rem;
+  }
+  .community-ques h5,
+  #user-name {
+    font-size: 0.9rem;
+  }
+  #thumbs-up img {
+    width: 40%;
+  }
+  #thumbs-up p {
+    font-size: 0.9rem;
+  }
+  #thumbs-down img {
+    width: 40%;
+  }
+  #thumbs-down p {
+    font-size: 0.9rem;
+  }
 }
 @media only screen and (max-width: 540px) {
-
+  #community-heading,
+  #ask-head {
+    font-size: 1.4rem;
+  }
+  .community-ques h2 {
+    font-size: 1rem;
+  }
+  .community-ques h5,
+  #user-name {
+    font-size: 0.8rem;
+  }
+  #thumbs-up img {
+    width: 40%;
+  }
+  #thumbs-up p {
+    font-size: 0.7rem;
+  }
+  #thumbs-down img {
+    width: 40%;
+  }
+  #thumbs-down p {
+    font-size: 0.9rem;
+  }
+  /* #community-ques-section {
+    grid-template-columns: 1fr;
+  } */
 }
 @media only screen and (max-width: 380px) {
 }
 
-
 /* ---------- WINDOW 6 --------- */
-
-
-
-/* #window6{
-  padding: 3% 5%;
-}
-.recommended{
+#window6 {
+  padding: 2% 5%;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 1.5%;
+  flex-wrap: wrap;
 }
-.recombox{
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 4%;
-  margin: 3% 0;
-
-  
+#recomm-head {
+  padding-inline: 5%;
+  font-family: "Source Serif 4";
+  font-size: 2.6rem;
 }
-.recomitem{
+.recomm-card {
+  background-color: #f5f7f9;
+  text-decoration: none;
+}
+.recomm-card .recomitem img {
   width: 100%;
-  background-color: #F5F7F9;
 }
-.recomimg{
-  width: 100%;
+.recom-head {
+  color: #00385d;
+  font-family: "Source Serif 4";
+  font-size: 1.6rem;
+  margin-block: 3%;
 }
-.recomtext p{
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #4682A9;
+.categories-pannel {
+  text-align: center;
+  margin-block: 2%;
 }
-.recomtext span{
-  font-size: 0.8rem;
+.categories-pannel a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #00385d;
 }
-.recomhead{
-  color: #00385D;
-}
-
- */
 
 @media only screen and (max-width: 1150px) {
-
+  #recomm-head {
+    font-size: 2rem;
+  }
+  .recom-head {
+    font-size: 1.5rem;
+  }
+  .categories-pannel a {
+    font-size: 1.1rem;
+  }
 }
 @media only screen and (max-width: 845px) {
- 
+  #recomm-head {
+    font-size: 2rem;
+  }
+  .recom-head {
+    font-size: 1.2rem;
+  }
+  .categories-pannel a {
+    font-size: 1rem;
+  }
 }
 @media only screen and (max-width: 767px) {
-
+  #recomm-head {
+    font-size: 1.6rem;
+  }
+  .recom-head {
+    font-size: 1.1rem;
+  }
+  .categories-pannel a {
+    font-size: 1rem;
+  }
 }
 @media only screen and (max-width: 540px) {
-
+  #window6 {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1%;
+  }
+  .categories-pannel {
+    text-align: center;
+    margin-top: 30%;
+  }
 }
 @media only screen and (max-width: 380px) {
 }
 
 /* ---------------------- WINDOW 7 -------------------------- */
-#Window7{
-  padding: 5% 5%;
+#Window7 {
+  padding: 2% 5%;
 }
 
-.cont{
+.cont {
   display: flex;
   width: 60%;
   justify-content: space-evenly;
   padding: 3% 0 0;
 }
-#Footercon{
+#Footercon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#Contact ul li{
-  
+#Contact ul li {
   list-style: none;
 }
-#Contact ul{
- 
+#Contact ul {
   padding: 0;
 }
-#Footerlogobox{
+#Footerlogobox {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-#Footerlogo{
+#Footerlogo {
   width: 42px;
   height: 64px;
   margin-right: 10px;
 }
-.Logobox{
+.Logobox {
   text-decoration: none;
-
 }
-#Footerlogotext,#Footerlogotext span{
+#Footerlogotext,
+#Footerlogotext span {
   font-size: 1.8rem;
-  font-family: 'Source Serif 4', serif;
-  color: #00385D;
+  font-family: "Source Serif 4", serif;
+  color: #00385d;
   font-weight: 600;
 }
-#Footerlogotext span{
-  color: #749BC2;
+#Footerlogotext span {
+  color: #749bc2;
 }
-.Footeritem #Footerlogobox{
-  align-items:center;
-  
+.Footeritem #Footerlogobox {
+  align-items: center;
 }
-.Footeritem{
+.Footeritem {
   width: 30%;
-  color:#00385D;
+  color: #00385d;
 }
-#Footerlogobox{
+#Footerlogobox {
   margin-bottom: 20px;
 }
-.Footeritemhead{
+.Footeritemhead {
   font-size: 1.2rem;
   font-weight: 500;
 }
-#Footercat ul li,#Footertrending ul li{
+#Footercat ul li,
+#Footertrending ul li {
   list-style: none;
 }
 
-#Footercat ul,#Footertrending ul{
+#Footercat ul,
+#Footertrending ul {
   padding: 0;
   text-align: center;
-
 }
-#Footercat ul li a,#Footertrending ul li a{
+#Footercat ul li a,
+#Footertrending ul li a {
   text-decoration: none;
-  color: #00385D;
+  color: #00385d;
 }
-#Footercat .Footeritemhead,#Footertrending .Footeritemhead{
+#Footercat .Footeritemhead,
+#Footertrending .Footeritemhead {
   margin-bottom: 20px;
 }
-#Footercatbox, #Footertrendingbox{
+#Footercatbox,
+#Footertrendingbox {
   width: 20%;
 }
-#Footermember ul{
+#Footermember ul {
   list-style: none;
   text-align: center;
 }
-#Footermemberbox{
+#Footermemberbox {
   width: 20%;
 }
-#Footermemberbox .Footeritemhead{
+#Footermemberbox .Footeritemhead {
   margin-bottom: 20px;
 }
-#Footericon{
+#Footericon {
   padding: 0 5%;
 }
-#Footericon .iconbox .fa-envelope{
+#Footericon .iconbox .fa-envelope {
   flex-wrap: wrap;
 }
-#Footermember ul{
-  
+#Footermember ul {
   padding: 0;
 }
-.iconbox{
-    margin: 10% 0;
-    display: flex;
-    justify-content: space-around;
+.iconbox {
+  margin: 10% 0;
+  display: flex;
+  justify-content: space-around;
 }
 /* ------------------- FOOTER ------------------- */
-#Window6{
+#Window8 {
   width: 100%;
   background-color: #002035;
   color: white;
   text-align: center;
   padding: 1.5% 0;
 }
-#Window6 h4{
+#Window8 h4 {
   font-size: 0.9rem;
   font-weight: 400;
 }
-#Window6 h5{
+#Window8 h5 {
   font-size: 0.8rem;
   font-weight: 400;
 }
-#Window6 h5 span{
+#Window8 h5 span {
   text-decoration: underline;
 }
 
-@media only screen and (max-width:866px){
-  #Footerlogotext, #Footerlogotext span{
-      font-size: 1.5rem;
+@media only screen and (max-width: 866px) {
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.5rem;
   }
-  #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-      font-size: 1rem;
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 1rem;
   }
-  #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-      font-size: 0.8rem;
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.8rem;
   }
-  
 }
-@media only screen and (max-width:766px){
-  #Footerlogotext, #Footerlogotext span{
-      font-size: 1.3rem;
+@media only screen and (max-width: 766px) {
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.3rem;
   }
-  #Window6 h4{
-      font-size: 0.7rem;
-      font-weight: 400;
+  #Window8 h4 {
+    font-size: 0.7rem;
+    font-weight: 400;
   }
-  #Window6 h5{
-      font-size: 0.6rem;
-      font-weight: 400;
+  #Window8 h5 {
+    font-size: 0.6rem;
+    font-weight: 400;
   }
-  #Footerlogo{
-      width: 30px;
-      height: 52px;
+  #Footerlogo {
+    width: 30px;
+    height: 52px;
   }
-  #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-      font-size: 0.9rem;
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 0.9rem;
   }
-  #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-      font-size: 0.7rem;
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.7rem;
   }
-  
 }
-@media only screen and (max-width:666px){
-  #Footerlogotext, #Footerlogotext span{
-      font-size: 1.1rem;
+@media only screen and (max-width: 666px) {
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.1rem;
   }
-  #Footerlogo{
-      width: 24px;
-      height: 46px;
+  #Footerlogo {
+    width: 24px;
+    height: 46px;
   }
-  #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-      font-size: 0.8rem;
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 0.8rem;
   }
-  #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-      font-size: 0.7rem;
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.7rem;
   }
-  
 }
-@media only screen and (max-width:576px){
-  #Footercon{
-      width: 100%;
+@media only screen and (max-width: 576px) {
+  #Footercon {
+    width: 100%;
   }
-  #Footericon h2{
-      font-size: 1.2rem;
+  #Footericon h2 {
+    font-size: 1.2rem;
   }
-  #Footericon .iconbox .handleicons{
-      font-size: 1rem;
+  #Footericon .iconbox .handleicons {
+    font-size: 1rem;
   }
-  .cont{
-      width: 100%;
+  .cont {
+    width: 100%;
   }
-  .Footeritem{
-      width: 100%;
+  .Footeritem {
+    width: 100%;
   }
-  #Footercatbox, #Footertrendingbox,#Footermemberbox{
-      width: 30%;
+  #Footercatbox,
+  #Footertrendingbox,
+  #Footermemberbox {
+    width: 30%;
   }
-  #Footerlogotext, #Footerlogotext span{
-      font-size: 1.1rem;
+  #Footerlogotext,
+  #Footerlogotext span {
+    font-size: 1.1rem;
   }
-  #Footerlogo{
-      width: 24px;
-      height: 46px;
+  #Footerlogo {
+    width: 24px;
+    height: 46px;
   }
-  #Contact ul .Footeritemhead, #Footertrending ul .Footeritemhead, #Footercat ul .Footeritemhead, #Footermember ul .Footeritemhead{
-      font-size: 0.8rem;
+  #Contact ul .Footeritemhead,
+  #Footertrending ul .Footeritemhead,
+  #Footercat ul .Footeritemhead,
+  #Footermember ul .Footeritemhead {
+    font-size: 0.8rem;
   }
-  #Contact ul li, #Footercat ul li, #Footertrending ul li,#Footermember ul li{
-      font-size: 0.7rem;
+  #Contact ul li,
+  #Footercat ul li,
+  #Footertrending ul li,
+  #Footermember ul li {
+    font-size: 0.7rem;
   }
-  
-  
 }
-
