@@ -491,7 +491,7 @@
   align-items: center;
   justify-content: center; */
   padding: 3% 5%;
-  height: 100vh;
+  /* height: 100vh; */
 
   /* margin-block:3% ; */
 }
@@ -502,6 +502,7 @@
 }
 .video-link{
   width: 100%;
+  padding: 3%;
   
 }
 
@@ -521,10 +522,157 @@
 @media only screen and (max-width: 380px) {
 }
 
-/* ---------------------- WINDOW 5 -------------------------- */
-#Window5{
+/* --------------- WINDOW 5 --------------- */
+#window5{
+  padding: 0 5% 3%;
+
+}
+#community-heading{
+  font-family: "Source Serif 4";
+  font-size: 2rem;
+  margin: 0 0 3% 0;
+  color: #00385d;
+}
+#community-ques-section{
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.community-ques{
+  padding: 2%;
+  background-color: #f5f7f9;
+}
+.community-ques #ques{
+  display: inline;
+  background-color: #00385D;
+  color: white;
+  border-radius:4rem;
+  padding: 2.2%;
+  font-size: 0.75rem;
+}
+.community-ques h2{
+  font-size: 1.6rem;
+  margin-top: 2%;
+  margin-bottom: 7%;
+}
+.community-ques h5{
+  font-size: 1.2rem;
+  margin:5% 0 18% 0;
+}
+#user-query{
+  display: flex;
+  align-items: center;
+  margin-block: 2%;
+  gap: 3%;
+}
+#thumbs{
+  display: flex;
+  gap: 10%;
+}
+#thumbs-up{
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+}
+#thumbs-down{
+  display: flex;
+  gap: 5%;
+  align-items: center;}
+
+#ask-question{
+  margin: 2% 0 2% 0;
+}
+#ask-head{
+  margin: 0 0 1% 0;
+  font-family: "Source Serif 4";
+  color: #00385d;
+  font-size: 2rem;
+}
+#ask-question form{
+  /* width: 80%; */
+  align-content: center;
+}
+
+@media only screen and (max-width: 1150px) {
+
+}
+@media only screen and (max-width: 845px) {
+ 
+}
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 540px) {
+
+}
+@media only screen and (max-width: 380px) {
+}
+
+
+/* ---------- WINDOW 6 --------- */
+
+
+
+/* #window6{
+  padding: 3% 5%;
+}
+.recommended{
+  display: grid;
+}
+.recombox{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 4%;
+  margin: 3% 0;
+
+  
+}
+.recomitem{
+  width: 100%;
+  background-color: #F5F7F9;
+}
+.recomimg{
+  width: 100%;
+}
+.recomtext p{
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #4682A9;
+}
+.recomtext span{
+  font-size: 0.8rem;
+}
+.recomhead{
+  color: #00385D;
+}
+
+ */
+
+@media only screen and (max-width: 1150px) {
+
+}
+@media only screen and (max-width: 845px) {
+ 
+}
+@media only screen and (max-width: 767px) {
+
+}
+@media only screen and (max-width: 540px) {
+
+}
+@media only screen and (max-width: 380px) {
+}
+
+/* ---------------------- WINDOW 7 -------------------------- */
+#Window7{
   padding: 5% 5%;
 }
+
 .cont{
   display: flex;
   width: 60%;
@@ -619,10 +767,14 @@
   flex-wrap: wrap;
 }
 #Footermember ul{
-
+  
   padding: 0;
 }
-
+.iconbox{
+    margin: 10% 0;
+    display: flex;
+    justify-content: space-around;
+}
 /* ------------------- FOOTER ------------------- */
 #Window6{
   width: 100%;
