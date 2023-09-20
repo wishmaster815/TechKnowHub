@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+
+#Window1{
+    background-color: #F5F7F9;
+    width: 100%;
+}
+#user-image-container{
+    display: none;
+}
+#Login a{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: row;
+   
+}
+#navbox{
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+#Searchform2,#Searchbox2,#Login2{
+    display: none;
+    
+}
+.Logobox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14%;
+    margin-right: 3%;
+}
+
+.nav-link{
+    color: #4681a9;
+    opacity: 0.6;
+    
+}
+.nav-link:hover{
+    color: #00385D;
+    opacity: 0.6;
+    
+}
+.navbar-toggler{
+    border: 0px;
+    border-radius: 0;
+    color: #002035;
+}
+
+.Logo{
+    width: 24px;
+    height: 38px;
+}
+.Logobox span{
+    font-weight: 600;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.5rem;
+    color: #00385D;
+}
+#Window1 .navbar #navbox .Logobox #LogoText{
+    color: #749BC2;
+}
+#Searchform{
+    width: 50%;
+}
+#Searchbox{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#Searchbox i{
+    padding: 10px 10px;
+    background-color: white;
+}
+.Searchbar{
+    border-radius: 0;
+    border: 0;
+    background-color: #F5F7F9;
+    width: 100%;
+
+}
+#Login{
+    width: 30%;
+    border: 0;
+    border-radius: 0;
+    background-color: #00385D;
+    color: white;
+
+}
+#Login:hover,#Login2:hover{
+    
+    background-color: #002035;
+    
+
+}
+#Login2{
+    width: 30%;
+    border: 0;
+    border-radius: 0;
+    background-color: #00385D;
+    color: white;
+
+}
+@media only screen and (max-width:1150px){
+    .Logobox{
+        margin-right: 7%;
+    }
+    #Login{
+        font-size: 0.8rem;
+    }
+
+}
+@media only screen and (max-width:992px){
+    #navbox{
+        justify-content: left;
+    }
+    .Logobox{
+        display: none;
+    }
+    #Searchbox{
+        display: none;
+    }
+    #Login{
+        display: none;
+    }
+    #Searchform2,#Searchbox2,#Login2{
+        display: block;
+        margin: auto;
+        
+    }
+    #Searchform2{
+        width: 100%;
+        padding: 3% 0%;
+    }
+    #Searchbox2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        
+    }
+    .Searchbar2{
+        border-radius: 0;
+        width: 100%;
+        border: 0;
+    }
+    #Login2{
+        font-size: 0.8rem;
+    }
+    #Searchbox2 i{
+        padding: 9px 2%;
+        background-color: white;
+    }
+
+
+}
+@media only screen and (max-width:453px){
+    #Login2{
+        font-size: 0.6rem;
+    }
+    .Searchbar2{
+        font-size: 0.8rem;
+    }
+    .nav-link{
+        font-size: 0.8rem;
+    }
+    .dropdown-item{
+        font-size: 0.8rem;
+    }
+
+}
+@media only screen and (max-width:361px){
+    #Login2{
+        font-size: 0.4rem;
+    }
+    .Searchbar2{
+        font-size: 0.7rem;
+    }
+    .nav-link{
+        font-size: 0.7rem;
+    }
+    .dropdown-item{
+        font-size: 0.7rem;
+    }
+
+}
+
+
+
+
+.row{
+    margin: 0;
+}
+
+
+
+.container{
+    /* padding: 5% 8%; */
+    margin: auto;
+    width: 100%;
+}
+
+.recombox{
+    display: flex;;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    /* justify-content: center; */
+}
+.linkbox{
+    text-decoration: none;
+    color: #4682A9;
+    width: 30%;
+    background-color: #F5F7F9;
+    margin: 2% 1%;
+
+}
+.recomimg{
+    width: 100%;
+}
+.hide{
+    display: none;
+}
+
+.recomtext{
+    margin: 0 2%;
+}
+
+@media only screen and (max-width:900px){
+    .recomitem{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .linkbox{
+        width: 100%;
+    }
+    .container{
+        padding: 0;
+    }
+}
+@media only screen and (max-width:772px){
+    .recomtext h3{
+        font-size: 1.3rem;
+    }
+    .recomtext p{
+        font-size: 0.9rem;
+    }
+    .recomtext span{
+        font-size: 0.9rem;
+    }
+    .recomimg{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:600px){
+    .linkbox{
+        width: 90%;
+        margin: auto
+    }
+    .recomtext h3{
+        font-size: 1.1rem;
+    }
+    .recomtext p{
+        font-size: 0.7rem;
+    }
+    .recomtext span{
+        font-size: 0.7rem;
+    }
+    .recomimg{
+        width: 37%;
+    }
+}
+@media only screen and (max-width:500px){
+    .linkbox{
+        width: 90%;
+        margin: auto
+    }
+    .recomtext h3{
+        font-size: 1rem;
+    }
+    .recomtext p{
+        font-size: 0.65rem;
+    }
+    .recomtext span{
+        display: none;
+    }
+    .recomimg{
+        width: 37%;
+    }
+}
+@media only screen and (max-width:400px){
+    .linkbox{
+        width: 90%;
+        margin: auto
+    }
+    .recomtext h3{
+        font-size: 0.9rem;
+    }
+    .recomtext p{
+        font-size: 0.6rem;
+    }
+    
+    .recomimg{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:400px){
+    .linkbox{
+        width: 90%;
+        margin: auto
+    }
+    .recomtext h3{
+        font-size: 0.8rem;
+    }
+    .recomtext p{
+        font-size: 0.5rem;
+    }
+    
+    .recomimg{
+        width: 40%;
+    }
+}

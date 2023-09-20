@@ -81,10 +81,20 @@
 #Searchform{
     width: 50%;
 }
+#Searchform .searchredirect{
+    text-decoration: none;
+    color: #002035;
+    width: 70%;
+}
+#Searchform2 .searchredirect{
+    text-decoration: none;
+    color: #002035;
+    width: 70%;
+}
 #Searchbox{
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 100%;
 }
 #Searchbox i{
     padding: 10px 10px;
@@ -153,7 +163,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 100%;
         
     }
     #Searchbar2{
@@ -974,6 +984,9 @@
     }
     
     
+}
+.hide{
+    display: none;
 }
 
 
