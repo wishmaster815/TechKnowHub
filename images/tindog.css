@@ -1,0 +1,153 @@
+body{
+    font-family: 'Montserrat';
+}
+.title{
+    background-color: #ff4c68;
+    /* height: 90vh; */
+    overflow: hidden;
+    /* padding: 4% 0; */
+    /* margin: 0; */
+}
+
+#Main_title{
+    font-size: 3rem;
+    font-family: 'Montserrat Black 900', sans-serif;
+    font-weight: 900;
+    color: white;
+    margin: 3% 0 0 0;
+    line-height: 1.5;
+}
+#page1{
+    padding: 3% 15% 0;
+    
+}
+.icon{
+    padding:0 5px 0 0;
+}
+.win1{
+    padding: 6% 0 0;
+}
+.navbar{
+    font-size: 1.1rem;
+}
+.nav-item{
+    padding: 0 18px;
+}
+.navbar-brand{
+    font-size: 2rem;
+}
+#img{
+    transform: rotate(25deg);
+    width: 20%;
+    position: absolute;
+    right: 28%;
+}
+.title-btn{
+    margin: 60px 0 80px;
+}
+/* .img-container{
+    text-align: center;
+} */
+#features{
+    padding: 7% 12%;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    /* top: -180px; */
+    /* position: absolute; */
+}
+.feat{
+    text-align: center;
+    padding: 20px 5%;
+}
+.feat-icon{
+    /* font-size: large; */
+    font-size: 80px;
+    padding: 40px;
+    color: #ef8172;
+}
+.feat-icon:hover{
+   
+    color: #ff4c68;
+}
+.feat h3{
+    font-weight: 600;
+}
+#testimonials{
+    
+    text-align: center;
+    background-color: #ef8172;
+    color: white;
+
+}
+.carousel-item{
+    padding: 7% 15%;
+}
+#testimonials h2{
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 2.8rem;
+}
+#testimonials img{
+    width: 10%;
+    border-radius: 100%;
+    margin: 30px;
+}
+#press{
+    background-color: #ef8172;
+    padding-bottom: 3%;
+    text-align: center;
+}
+.press-logo{
+    width: 12%;
+    margin: 20px 30px 50px;
+}
+#pricing{
+    padding: 100px;
+    text-align: center;
+}
+#pricing h2{
+    font-weight: 600;
+}
+
+.pricing-head{
+    font-size: 2.5rem;
+}
+.card{
+    text-align: center;
+    
+}
+.pricing-col{
+    padding: 3% 2%;
+}
+.price-btn{
+    width: 100%;
+}
+#cta{
+    text-align: center;
+    background-color: #ff4c68;
+    padding: 7% 15%;
+}
+#cta h3{
+    font-size: 3.2rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: white;
+    padding: 0% 0% 3%;
+    line-height: 1.5;
+}
+#footer{
+    padding: 7% 15%;
+    text-align: center;
+}
+#footer p{
+    font-size: 1.4rem;
+    padding: 3% 0 0;
+}
+#footer i{
+    font-size: 1.4rem;
+    padding: 0 1% 0;
+}
+#footer i:hover{
+    color: rgba(0, 0, 0, 0.619);
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Data</title>
+</head>
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Upload Your Article Data</h2>
+            <form id="upload-form">
+                <div class="inputbox">
+                    <label for="uploaded-by">Uploaded by:</label>
+                    <span id="username"></span>
+                </div>
+                <div class="inputbox">
+                    <input type="text" id="heading" placeholder="Enter a heading" required>
+                </div>
+                <div class="inputbox">
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="General">General</option>
+                        <option value="University">University</option>
+                        <option value="Students">Students</option>
+                        <option value="Kids">Kids</option>
+                        <option value="Toddler">Toddler</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="inputbox">
+                    <textarea id="paragraph" rows="4" cols="50" placeholder="Enter a paragraph" required></textarea>
+                </div>
+                <div class="inputbox">
+                    <input type="file" id="image" accept="image/*" required>
+                </div>
+                <div class="inputbox">
+                    <input type="file" id="video" accept="video/*" required>
+                </div>
+                
+                <input type="submit" value="Upload" class="sub">
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+        import { getDatabase, ref, push, set, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+        import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
+
+    const firebaseConfig = {
+        // Your Firebase configuration
+         apiKey: "AIzaSyCQUMJAtCQmsMNsG_0aZzf6imIpuQOHtjA",
+         authDomain: "sign-up-1ccb3.firebaseapp.com",
+         projectId: "sign-up-1ccb3",
+         storageBucket: "sign-up-1ccb3.appspot.com",
+         messagingSenderId: "518805210306",
+         appId: "1:518805210306:web:3a89b423dcf78e2d9e275b"
+    };
+    const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const auth = getAuth(app);
+        const storage = getStorage(app);
+
+        const usernameElement = document.getElementById("username");
+
+        // Check if a user is logged in
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, fetch user data from the database
+                const userId = user.uid;
+
+                // Reference to the user's data in the database
+                const userRef = ref(db, 'users/' + userId);
+
+                get(userRef)
+                    .then((snapshot) => {
+                        if (snapshot.exists()) {
+                            const userData = snapshot.val();
+                            // Display the username of the logged-in user
+                            usernameElement.textContent = userData.username;
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("Error fetching user data:", error);
+                    });
+            }
+        });
+
+        const uploadForm = document.getElementById("upload-form");
+const headingInput = document.getElementById("heading");
+const paragraphInput = document.getElementById("paragraph");
+const imageInput = document.getElementById("image");
+const videoInput = document.getElementById("video");
+const categorySelect = document.getElementById("category"); // Add this line
+
+uploadForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const heading = headingInput.value;
+            const paragraph = paragraphInput.value;
+            const imageFile = imageInput.files[0];
+            const videoFile = videoInput.files[0];
+            const category = categorySelect.value; // Get the selected category
+
+            // Check if a user is logged in
+            const user = auth.currentUser;
+            if (!user) {
+                alert("Please log in to upload data.");
+                return;
+            }
+
+            // Fetch the current entry count for the user
+            const userEntryCountRef = ref(db, 'users/' + user.uid + '/entryCount');
+            const userEntryCountSnapshot = await get(userEntryCountRef);
+            let userEntryCount = 0;
+
+            if (userEntryCountSnapshot.exists()) {
+                userEntryCount = userEntryCountSnapshot.val();
+            }
+
+            // Create a new data object with a custom entry name
+            const newData = {
+                category: category, // Include the category
+                heading: heading,
+                paragraph: paragraph,
+                imageUrl: null,
+                videoUrl: null,
+            };
+
+            // Upload the image and video files to Firebase Storage and get their download URLs
+            const imageRef = storageRef(storage, 'images/' + user.uid + '/entry' + (userEntryCount + 1) + '/' + imageFile.name);
+            const videoRef = storageRef(storage, 'videos/' + user.uid + '/entry' + (userEntryCount + 1) + '/' + videoFile.name);
+
+            try {
+                // Upload the files
+                await uploadBytes(imageRef, imageFile);
+                await uploadBytes(videoRef, videoFile);
+
+                // Get the download URLs
+                newData.imageUrl = await getDownloadURL(imageRef);
+                newData.videoUrl = await getDownloadURL(videoRef);
+
+                // Save the data in the user's directory in the Realtime Database
+                const newDataRef = ref(db, 'users/' + user.uid + '/uploadedData/entry' + (userEntryCount + 1));
+                await set(newDataRef, newData);
+
+                // Increment the user's entry count
+                await set(userEntryCountRef, userEntryCount + 1);
+
+                alert("Data uploaded successfully!");
+            } catch (error) {
+                alert("An error occurred during file upload: " + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

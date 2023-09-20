@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Include your CSS stylesheet if needed -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Registration Form</h2>
+            <form id="register-form">
+                <div class="inputbox">
+                    <label for="username">Username:</label>
+                    <input class="input-field" type="text" id="username" required>
+                    
+                </div>
+                <div class="inputbox">
+                    <label for="email">Email:</label>
+                    <input class="input-field" type="email" id="register-email" required>
+            
+                </div>
+                <div class="inputbox">
+                    <label for="password">Password:</label>
+                    <input class="input-field" type="password" id="register-password" required>
+                    
+                </div>
+                <div class="inputbox">
+                    <label for="phone">Phone:</label>
+                    <input class="input-field" type="text" id="phone" required>
+                    
+                </div>
+                <div class="inputbox">
+                    <label for="address">Address:</label>
+                    <input class="input-field" type="text" id="address" required>
+                    
+                </div>
+                <div class="inputbox">
+                    <label for="image">Profile Picture:</label>
+                    <input class="input-field" type="file" id="user-image" accept="image/*" >
+                    
+                </div>
+                <div class="inputbox">
+                    <label for="institution">Institution:</label>
+                    <input class="input-field" type="text" id="institution" required>
+                    
+                </div>
+                
+
+                <input class="login-button" type="submit" value="Register" class="sub">
+            </form>
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+    <!--ya wali script ni lagana script.js mai-->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+        import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+        import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
+        
+        const firebaseConfig = {
+            // Your Firebase configuration
+         apiKey: "AIzaSyCQUMJAtCQmsMNsG_0aZzf6imIpuQOHtjA",
+         authDomain: "sign-up-1ccb3.firebaseapp.com",
+         projectId: "sign-up-1ccb3",
+         storageBucket: "sign-up-1ccb3.appspot.com",
+         messagingSenderId: "518805210306",
+         appId: "1:518805210306:web:3a89b423dcf78e2d9e275b"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getDatabase(app);
+        const storage = getStorage(app);
+
+        const registerForm = document.getElementById("register-form");
+    const usernameInput = document.getElementById("username");
+    const registerEmail = document.getElementById("register-email");
+    const registerPassword = document.getElementById("register-password");
+    const phoneInput = document.getElementById("phone");
+    const addressInput = document.getElementById("address");
+    const institutionInput = document.getElementById("institution");
+    const userImageInput = document.getElementById("user-image");
+
+    registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = usernameInput.value;
+        const email = registerEmail.value;
+        const password = registerPassword.value;
+        const phone = phoneInput.value;
+        const address = addressInput.value;
+        const institution = institutionInput.value;
+        const userImage = userImageInput.files[0];
+
+        const usernameRef = ref(db, 'usernames/' + username);
+
+        get(usernameRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    alert("Username is taken. Please choose a different username.");
+                } else {
+                    createUserWithEmailAndPassword(auth, email, password)
+                        .then((userCredential) => {
+                            const user = userCredential.user;
+                            const userUid = user.uid;
+
+                            // Upload the user's image to Firebase Storage
+                            const userImageRef = storageRef(storage, 'images/' + userUid + '/profile-image/' + userImage.name);
+                            uploadBytes(userImageRef, userImage)
+                                .then(() => {
+                                    getDownloadURL(userImageRef)
+                                        .then((url) => {
+                                            // Store additional user data in the Firebase Realtime Database
+                                            set(ref(db, 'users/' + userUid), {
+                                                username: username,
+                                                email: email,
+                                                phone: phone,
+                                                address: address,
+                                                institution: institution,
+                                                imageUrl: url // Save the image URL
+                                            })
+                                                .then(() => {
+                                                    set(usernameRef, true)
+                                                        .then(() => {
+                                                            alert("Registration Successful!");
+                                                            // Redirect to the login page or another page
+                                                        })
+                                                        .catch((error) => {
+                                                            alert("Registration successful, but data storage failed.");
+                                                            console.error(error);
+                                                        });
+                                                })
+                                                .catch((error) => {
+                                                    alert("Registration successful, but data storage failed.");
+                                                    console.error(error);
+                                                });
+                                        })
+                                        .catch((error) => {
+                                            alert("Registration successful, but failed to get image URL: " + error.message);
+                                            console.error(error);
+                                        });
+                                })
+                                .catch((error) => {
+                                    alert("Registration successful, but failed to upload image: " + error.message);
+                                    console.error(error);
+                                });
+                        })
+                        .catch((error) => {
+                            alert("Registration failed. " + error.message);
+                            console.error(error);
+                        });
+                }
+            })
+            .catch((error) => {
+                console.error("Error checking username:", error);
+            });
+    });
+    </script>
+     <!--ya wali script ni lagana script.js mai-->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Include your CSS stylesheet if needed -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="box">
+        <div class="form">
+            <h2>Login Form</h2>
+            <form id="login-form">
+                <div class="inputbox">
+                    <label for="fname">First name:</label>
+                    <input class="input-field" type="email" id="login-email" required>
+                    
+                </div>
+                <div class="inputbox">
+                    <label for="fname">First name:</label>
+                    <input class="input-field" type="password" id="login-password" required>
+                    
+                </div>
+                <input class="login-button" type="submit" value="Login" class="sub">
+            </form>
+            <p>Not a user? <a href="register.html">Register</a></p>
+        </div>
+    </div>
+<!--ya wali script ni lagana script.js mai-->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+        
+        const firebaseConfig = {
+    apiKey: "AIzaSyCQUMJAtCQmsMNsG_0aZzf6imIpuQOHtjA",
+    authDomain: "sign-up-1ccb3.firebaseapp.com",
+    projectId: "sign-up-1ccb3",
+    storageBucket: "sign-up-1ccb3.appspot.com",
+    messagingSenderId: "518805210306",
+    appId: "1:518805210306:web:3a89b423dcf78e2d9e275b"
+  };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        const loginForm = document.getElementById("login-form");
+        const loginEmail = document.getElementById("login-email");
+        const loginPassword = document.getElementById("login-password");
+
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = loginEmail.value;
+            const password = loginPassword.value;
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then(() => {
+                    alert("Login Successful!");
+                    // Redirect to the dashboard.html page
+                    window.location.href = "mhomepage.html";
+                })
+                .catch((error) => {
+                    alert("Login failed. Invalid email or password.");
+                    console.error(error);
+                });
+        });
+    </script>
+     <!--ya wali script ni lagana script.js mai-->
+</body>
+</html>

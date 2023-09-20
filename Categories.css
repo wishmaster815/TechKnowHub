@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* ---------------------------CSS of First Window (Category Listing)----------------- */
+#Window2{
+    margin: 5% 0 0;
+}
+#catbox{
+    margin-bottom: 5%;
+}
+#Window2 h1{
+    font-family: 'Source Serif 4', serif;
+    margin-bottom: 0%;
+    text-align: center;
+}
+/* ----------------------------CSS for Second Window------------------------ */
+#Window3{
+    padding: 0 8%;
+}
+.fullarticle{
+    margin-bottom: 3%;
+}
+.trendingcon{
+    padding: 8% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.trendingitem{
+    padding: 0 5%;
+}
+
+#Upload{
+    margin: 15% 0;
+}
+#Upload h2{
+    font-size: 1.5rem;
+    
+}
+#Uploadbtn{
+    width: 50%;
+    
+}
+
+/* -------------------CSS for Hot topics-------------------------- */
+#Hottopics{
+    background-color: #002035;
+    padding: 5% 8%;
+}
+#Hottopics h1{
+    color: white;
+    font-family: 'Source Serif 4', serif;
+}
+#Hottopics h5{
+    color: #4682A9;
+}
+.Hotbox{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Hotitem{
+    text-align: center;
+    background-color: white;
+    width: 30%;
+    text-decoration: none;
+    color: #002035;
+}
+.Hotitem img{
+    width: 100%;
+}
+.Hotitem h3{
+    text-align: left;
+}
+
+
+/* ---------------------------------CSS of the Surprise page------------------- */
+#Surprise{
+    padding: 1% 8%;
+    position: relative;
+}
+.recombox{
+    margin: 0;
+    background-color: white;
+}
+.recomitem{
+    background-color: white;
+}
+
+.linkbox{
+    background-color: white;
+    width: 30%;
+    margin: 0;
+}
+.recombox h3{
+    position: relative;
+    top: -70px;
+    color: white;
+}

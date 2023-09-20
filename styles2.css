@@ -1,0 +1,12 @@
+#user-image-container {
+    width: 100px; /* Adjust the width and height as needed */
+    height: 100px;
+    border-radius: 50%; /* Makes the container and image circular */
+    overflow: hidden; /* Clips the image to the circular shape */
+}
+
+#user-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /* Ensures the image covers the circular container */
+}

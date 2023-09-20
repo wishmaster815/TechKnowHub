@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Include your CSS stylesheet if needed -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <h1>Welcome to Your Dashboard</h1>
+    <div id="user-info">
+        <h2>User Information</h2>
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>Institution Name:</strong> <span id="institution"></span></p>
+        <div id="user-image-container">
+            <img id="user-image" src="" alt="User Image">
+        </div>
+    </div>
+    
+
+
+    <div class="inputbox">
+        <a href="upload.html">
+            <input type="button" value="Upload" class="sub">
+        </a>
+    </div>
+    <h2>Your Uploaded Articles</h2>
+    <div>
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+            <option value="">All</option>
+            <option value="General">General</option>
+            <option value="University">University</option>
+            <option value="Students">Students</option>
+            <option value="Kids">Kids</option>
+            <option value="Toddler">Toddler</option>
+            <option value="Other">Other</option>
+        </select>
+        <button id="applyFilter">Apply Filter</button>
+    </div>
+    <ul id="uploaded-headings"></ul>
+
+
+    <button id="logout">Logout</button>
+    <!--ya wali script ni lagana script.js mai-->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+
+        const firebaseConfig = {
+            // Your Firebase configuration
+         apiKey: "AIzaSyCQUMJAtCQmsMNsG_0aZzf6imIpuQOHtjA",
+         authDomain: "sign-up-1ccb3.firebaseapp.com",
+         projectId: "sign-up-1ccb3",
+         storageBucket: "sign-up-1ccb3.appspot.com",
+         messagingSenderId: "518805210306",
+         appId: "1:518805210306:web:3a89b423dcf78e2d9e275b"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getDatabase(app);
+
+        const usernameElement = document.getElementById("username");
+        const emailElement = document.getElementById("email");
+        const phoneElement = document.getElementById("phone");
+        const addressElement = document.getElementById("address");
+        const institutionElement = document.getElementById("institution");
+        const logoutButton = document.getElementById("logout");
+
+        // Check if a user is logged in
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in, fetch user data from the database
+                const userId = user.uid;
+
+                // Reference to the user's data in the database
+                const userRef = ref(db, 'users/' + userId);
+
+get(userRef)
+    .then((snapshot) => {
+        if (snapshot.exists()) {
+            const userData = snapshot.val();
+            // Display user information on the dashboard
+            usernameElement.textContent = userData.username;
+            emailElement.textContent = userData.email;
+            phoneElement.textContent = userData.phone;
+            addressElement.textContent = userData.address;
+            institutionElement.textContent = userData.institution;
+
+            // Check if the user has an image URL in their data
+            if (userData.imageUrl) {
+                const userImage = document.getElementById("user-image");
+                userImage.src = userData.imageUrl; // Set the src attribute to the image URL
+            }
+        }
+    })
+    .catch((error) => {
+        console.error("Error fetching user data:", error);
+    });
+
+                // Logout button event listener
+                logoutButton.addEventListener("click", () => {
+                    signOut(auth)
+                        .then(() => {
+                            // Redirect to the login page or perform any other actions upon logout
+                            window.location.href = "index.html";
+                        })
+                        .catch((error) => {
+                            console.error("Error signing out:", error);
+                        });
+                });
+            } else {
+                // User is not signed in, redirect to the login page
+                window.location.href = "index.html";
+            }
+        });
+        // Add this code inside the onAuthStateChanged callback
+// Add this code inside the onAuthStateChanged callback
+const headingsList = document.getElementById("uploaded-headings");
+
+// Check if a user is logged in
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        // User is signed in, fetch user data from the database
+        const userId = user.uid;
+
+        // Reference to the user's uploaded data in the database
+        const userUploadsRef = ref(db, 'users/' + userId + '/uploadedData');
+
+        // Fetch the uploaded data
+        get(userUploadsRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const uploadedData = snapshot.val();
+                    // Extract and display the headings
+                    const headings = [];
+                    Object.values(uploadedData).forEach((data) => {
+                        if (data.heading) {
+                            headings.push(data.heading);
+                        }
+                    });
+                    if (headings.length > 0) {
+                        headingsList.innerHTML = headings.map((heading) => `<li>${heading}</li>`).join('');
+                    } else {
+                        headingsList.innerHTML = "<li>No articles uploaded yet.</li>";
+                    }
+                } else {
+                    headingsList.innerHTML = "<li>No articles uploaded yet.</li>";
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching user's uploaded data:", error);
+            });
+    } else {
+        // User is not signed in, redirect to the login page
+        window.location.href = "index.html";
+    }
+});
+const categoryFilter = document.getElementById("categoryFilter");
+    const applyFilterButton = document.getElementById("applyFilter");
+
+    applyFilterButton.addEventListener("click", () => {
+        // Check if a user is logged in
+        const user = auth.currentUser;
+        if (!user) {
+            alert("Please log in to filter data.");
+            return;
+        }
+
+        const selectedCategory = categoryFilter.value;
+
+        // Reference to the user's uploaded data in the database
+        const userUploadsRef = ref(db, 'users/' + user.uid + '/uploadedData');
+
+        // Fetch the uploaded data with the selected category filter
+        get(userUploadsRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const uploadedData = snapshot.val();
+                    const filteredHeadings = Object.values(uploadedData)
+                        .filter((data) => data.heading && (!selectedCategory || data.category === selectedCategory))
+                        .map((data) => data.heading);
+
+                    if (filteredHeadings.length > 0) {
+                        headingsList.innerHTML = filteredHeadings.map((heading) => `<li>${heading}</li>`).join('');
+                    } else {
+                        headingsList.innerHTML = "<li>No headings matching the filter.</li>";
+                    }
+                } else {
+                    headingsList.innerHTML = "<li>No headings uploaded yet.</li>";
+                }
+            })
+            .catch((error) => {
+                console.error("Error fetching user's uploaded data:", error);
+            });
+    });
+
+    </script>
+     <!--ya wali script ni lagana script.js mai-->
+</body>
+</html>
