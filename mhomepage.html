@@ -74,26 +74,30 @@
 
           </ul>
           <form id="Searchform" class="d-flex" role="search">
-            <div id="Searchbox">
+            <a class="searchredirect" href="search.html">
 
-              <i class="fa-solid fa-magnifying-glass" style="color: #00385d;"></i>
-              <input id="Searchbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </div>
+              <div id="Searchbox">
+  
+                <i class="fa-solid fa-magnifying-glass" style="color: #00385d;"></i>
+                <input id="Searchbar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onkeyup="search()">
+              </div>
+            </a>
             <button id="Login" class="btn btn-outline-success" type="button"><a href="login.html">Sign in/Register</a></button>
             <div id="user-image-container">
-                <a href="/dashboard.html"><img id="user-image" src="" alt="User Image"></a>
-              
+              <img id="user-image" src="" alt="User Image">
             </div>
           </form>
         </div>
 
       </div>
       <form id="Searchform2" class="d-flex" role="search">
+        <a class="searchredirect" href="search.html">
         <div id="Searchbox2">
 
           <i class="fa-solid fa-magnifying-glass" style="color: #00385d;"></i>
           <input id="Searchbar2" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         </div>
+      </a>
         <button id="Login2" class="btn btn-outline-success" type="button">Sign in/Register</button>
       </form>
     </nav>
