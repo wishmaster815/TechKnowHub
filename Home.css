@@ -15,6 +15,9 @@
     background-color: #F5F7F9;
     width: 100%;
 }
+#user-image-container{
+    display: none;
+}
 
 #user-image-container2 a{
     text-decoration: none;
