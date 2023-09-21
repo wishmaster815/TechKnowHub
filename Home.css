@@ -20,6 +20,10 @@
     text-decoration: none;
     color: #002035;
 }
+#Uploadbtn a{
+    text-decoration: none;
+    color: white;
+}
 #user-image-container2 a{
     display: none;
 }
